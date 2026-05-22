@@ -6,30 +6,46 @@
   <title>The Panama Bride | Guía de bodas en Panamá</title>
   <meta name="description" content="Guía moderna para planificar bodas en Panamá: venues, bridal showers, vestidos, checklist, presupuesto y planner personalizado." />
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,sans-serif;background:#f7f1ea;color:#2f2925}
-    nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(255,250,245,.92);backdrop-filter:blur(12px);padding:14px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ead9c8}
-    nav a{color:#2f2925;text-decoration:none;margin-left:18px;font-size:14px}
-    .brand{font-family:Georgia,serif;font-size:24px}
-    .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:90px 20px 50px}
-    h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,90px);font-weight:400;margin-bottom:18px}
-    h2{font-family:Georgia,serif;font-size:38px;margin-bottom:16px;font-weight:400}
-    h3{font-family:Georgia,serif;font-size:24px;margin-bottom:10px}
-    p{font-size:18px;line-height:1.6;margin-bottom:22px}
-    .btn,button{border:0;background:#d8b98c;color:#2f2925;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;display:inline-block;margin:6px}
-    .btn.alt{background:#fff7ef}
-    section{padding:80px 7%}
-    .center{text-align:center;max-width:850px;margin:auto}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:30px}
-    .card{background:#fffaf5;border:1px solid #ead9c8;border-radius:26px;padding:24px;box-shadow:0 12px 30px rgba(70,50,35,.08)}
-    .tag{display:inline-block;background:#efe0cf;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
-    select,input{width:100%;padding:13px;border-radius:14px;border:1px solid #d8c5b1;margin:8px 0 16px;background:white}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;background:#090807;color:#f7efe6}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(9,8,7,.82);backdrop-filter:blur(16px);padding:16px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(216,185,140,.25)}
+    nav a{color:#f7efe6;text-decoration:none;margin-left:18px;font-size:14px;letter-spacing:.4px}
+    .brand{font-family:Georgia,serif;font-size:26px;color:#d8b98c}
+    .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.72)),url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 20px 70px}
+    h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,92px);font-weight:400;margin-bottom:18px;color:#fff7ef}
+    h2{font-family:Georgia,serif;font-size:42px;margin-bottom:16px;font-weight:400;color:#f8dfbd}
+    h3{font-family:Georgia,serif;font-size:24px;margin-bottom:10px;color:#f8dfbd}
+    p{font-size:18px;line-height:1.6;margin-bottom:22px;color:#e9ded3}
+    section{padding:90px 7%}
+    .center{text-align:center;max-width:900px;margin:auto}
+    .btn,button{border:1px solid rgba(216,185,140,.55);background:#d8b98c;color:#120f0c;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;display:inline-block;margin:6px}
+    .btn.alt{background:transparent;color:#f7efe6}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+    .card{background:linear-gradient(145deg,#151210,#0d0b09);border:1px solid rgba(216,185,140,.22);border-radius:26px;padding:24px;box-shadow:0 18px 45px rgba(0,0,0,.35)}
+    .tag{display:inline-block;background:rgba(216,185,140,.13);border:1px solid rgba(216,185,140,.25);color:#f8dfbd;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
+    select,input{width:100%;padding:13px;border-radius:14px;border:1px solid rgba(216,185,140,.35);margin:8px 0 16px;background:#110f0d;color:#f7efe6}
+    label{display:block;text-align:left;color:#f8dfbd;margin-top:10px}
     .hidden{display:none}
-    ul{margin-left:20px;line-height:1.8}
-    .premium{background:#2f2925;color:#fff7ef}
-    footer{text-align:center;padding:40px;background:#201b18;color:#fff7ef;font-size:14px}
+    ul{margin-left:20px;line-height:1.8;color:#e9ded3}
+    .venue-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+    #map{height:620px;border-radius:28px;border:1px solid rgba(216,185,140,.28);overflow:hidden}
+    .venue-list{max-height:620px;overflow:auto;padding-right:8px}
+    .venue-card{margin-bottom:16px}
+    .venue-card a{color:#d8b98c;text-decoration:none;font-weight:bold}
+    .premium{background:#120f0c}
+    footer{text-align:center;padding:40px;background:#050403;color:#fff7ef;font-size:14px}
     .small{font-size:13px;opacity:.75}
+    @media(max-width:850px){
+      nav{display:block;text-align:center}
+      nav div:last-child{margin-top:10px}
+      nav a{margin:6px;font-size:13px}
+      .venue-layout{grid-template-columns:1fr}
+      #map{height:420px}
+    }
   </style>
 </head>
 
@@ -49,9 +65,9 @@
 <section class="hero">
   <div class="center">
     <h1>The Panama Bride</h1>
-    <p>La guía moderna, bonita y práctica para planificar tu boda en Panamá sin perderte en mil chats, PDFs y cotizaciones.</p>
+    <p>La guía moderna, elegante y práctica para planificar tu boda en Panamá.</p>
     <a class="btn" href="#planner">Empezar mi planner</a>
-    <a class="btn alt" href="#venues">Ver venues</a>
+    <a class="btn alt" href="#venues">Explorar venues</a>
   </div>
 </section>
 
@@ -64,16 +80,16 @@
   <div class="card center">
     <label>Invitados estimados</label>
     <select id="guests">
-      <option value="intima">Menos de 50</option>
+      <option value="íntima">Menos de 50</option>
       <option value="media">50–120</option>
       <option value="grande">120+</option>
     </select>
 
     <label>Estilo</label>
     <select id="vibe">
-      <option value="lujo">Elegante / luxury</option>
+      <option value="luxury">Elegante / luxury</option>
       <option value="playa">Tropical / playa</option>
-      <option value="romantica">Romántica / jardín</option>
+      <option value="romántica">Romántica / jardín</option>
       <option value="moderna">Moderna / ciudad</option>
     </select>
 
@@ -85,7 +101,6 @@
     </select>
 
     <button onclick="crearPlan()">Ver mi plan</button>
-
     <div id="plan" class="card hidden"></div>
   </div>
 </section>
@@ -93,18 +108,21 @@
 <section id="venues">
   <div class="center">
     <h2>Venues en Panamá</h2>
-    <p>Referencias iniciales para comparar estilo, capacidad y presupuesto estimado.</p>
+    <p>Filtra por tipo de boda y explora opciones en el mapa. Capacidades y precios son referenciales.</p>
 
     <select id="venueFilter" onchange="filtrarVenues()">
       <option value="todos">Ver todos</option>
-      <option value="ciudad">Ciudad</option>
-      <option value="playa">Playa</option>
-      <option value="jardin">Jardín / naturaleza</option>
-      <option value="intimo">Íntimo</option>
+      <option value="Ciudad">Ciudad</option>
+      <option value="Playa">Playa</option>
+      <option value="Montaña">Montaña</option>
+      <option value="Naturaleza">Naturaleza</option>
     </select>
   </div>
 
-  <div class="grid" id="venueGrid"></div>
+  <div class="venue-layout">
+    <div id="map"></div>
+    <div class="venue-list" id="venueGrid"></div>
+  </div>
 </section>
 
 <section id="brunch">
@@ -114,7 +132,7 @@
   </div>
 
   <div class="grid">
-    <div class="card"><h3>Brunch elegante</h3><p>Ideal para 15–40 personas.</p><span class="tag">$$</span><span class="tag">Fotos cute</span></div>
+    <div class="card"><h3>Brunch elegante</h3><p>Ideal para 15–40 personas.</p><span class="tag">$$</span><span class="tag">Fotos lindas</span></div>
     <div class="card"><h3>Rooftop / cena privada</h3><p>Perfecto para brindis con amigas o familia.</p><span class="tag">$$$</span><span class="tag">Noche</span></div>
     <div class="card"><h3>Garden tea party</h3><p>Más romántico, íntimo y editorial.</p><span class="tag">$$</span><span class="tag">Día</span></div>
     <div class="card"><h3>Beach club</h3><p>Para una novia más tropical y relaxed.</p><span class="tag">$$$</span><span class="tag">Playa</span></div>
@@ -145,41 +163,116 @@
       <input type="email" name="email" placeholder="Tu email" required>
       <input type="text" name="wedding_date" placeholder="Fecha tentativa de boda">
       <button type="submit">Quiero el kit</button>
-      <p class="small">Cambiaremos este formulario por tu Formspree real después.</p>
+      <p class="small">Luego conectamos este formulario a Formspree real.</p>
     </form>
   </div>
 </section>
 
 <footer>
   The Panama Bride · Guía independiente para planificación de bodas en Panamá.<br>
-  <span class="small">Precios y capacidades son referenciales y deben confirmarse directamente con cada proveedor.</span>
+  <span class="small">Precios y capacidades son estimados referenciales y deben confirmarse directamente con cada proveedor.</span>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
 const venues = [
-  {name:"The Santa María Hotel", zona:"ciudad", cap:"Hasta 515 aprox.", precio:"$$$$", vibe:"Ballroom elegante, hotel luxury, ideal para bodas grandes."},
-  {name:"Hotel La Compañía", zona:"ciudad", cap:"48–450 aprox.", precio:"$$$$", vibe:"Casco Antiguo, histórico, editorial y premium."},
-  {name:"American Trade Hotel", zona:"intimo", cap:"Consultar", precio:"$$$$", vibe:"Boutique, Casco, perfecto para bodas íntimas con mucho estilo."},
-  {name:"Buenaventura", zona:"playa", cap:"Hasta 600 aprox.", precio:"$$$$", vibe:"Destination wedding, playa, resort y experiencia completa."},
-  {name:"Summit Rainforest", zona:"jardin", cap:"Hasta 250 aprox.", precio:"$$$", vibe:"Naturaleza, tropical, jardín y ambiente rainforest."},
-  {name:"Villa Ana", zona:"intimo", cap:"Consultar", precio:"$$$", vibe:"Casco, mansión restaurada, cenas y celebraciones íntimas."}
+  {name:"Casa Veranda", tipo:"Ciudad", zona:"Panamá City", distancia:"0 km", capacidad:"150-250", precio:"$8k-$20k", maps:"https://maps.google.com/?q=Casa+Veranda+Panama", lat:8.9824, lng:-79.5199},
+  {name:"The Santa Maria, a Luxury Collection Hotel & Golf Resort", tipo:"Ciudad", zona:"Panamá City", distancia:"15 min", capacidad:"300-500", precio:"$20k-$80k", maps:"https://maps.google.com/?q=The+Santa+Maria+Panama", lat:9.0186, lng:-79.4665},
+  {name:"JW Marriott Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"300-700", precio:"$25k-$100k", maps:"https://maps.google.com/?q=JW+Marriott+Panama", lat:8.9766, lng:-79.5075},
+  {name:"Sortis Hotel, Spa & Casino", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"250-600", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Sortis+Hotel+Panama", lat:8.9878, lng:-79.5232},
+  {name:"Waldorf Astoria Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"5 min", capacidad:"150-350", precio:"$18k-$60k", maps:"https://maps.google.com/?q=Waldorf+Astoria+Panama", lat:8.9799, lng:-79.5214},
+  {name:"Hotel La Compañía", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"80-450", precio:"$20k-$90k", maps:"https://maps.google.com/?q=Hotel+La+Compañia+Panama", lat:8.9522, lng:-79.5353},
+  {name:"American Trade Hotel", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"100-300", precio:"$18k-$60k", maps:"https://maps.google.com/?q=American+Trade+Hotel", lat:8.9525, lng:-79.5350},
+  {name:"Sofitel Legend Casco Viejo", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"120-350", precio:"$25k-$100k", maps:"https://maps.google.com/?q=Sofitel+Legend+Casco+Viejo", lat:8.9510, lng:-79.5318},
+  {name:"Azahar Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-180", precio:"$8k-$25k", maps:"https://maps.google.com/?q=Azahar+Panama", lat:8.9826, lng:-79.5115},
+  {name:"Filomena Cucina di Mare Panamá", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-200", precio:"$10k-$30k", maps:"https://maps.google.com/?q=Filomena+Panama", lat:8.9830, lng:-79.5120},
+  {name:"Hacienda Real Panamá", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"100-250", precio:"$7k-$20k", maps:"https://maps.google.com/?q=Hacienda+Real+Panama", lat:8.9940, lng:-79.5200},
+  {name:"Restaurante El Jardín de Gaudí", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-180", precio:"$6k-$18k", maps:"https://maps.google.com/?q=El+Jardin+de+Gaudi+Panama", lat:8.9870, lng:-79.5200},
+  {name:"Biomuseo", tipo:"Ciudad", zona:"Amador", distancia:"15 min", capacidad:"200-500", precio:"$15k-$60k", maps:"https://maps.google.com/?q=Biomuseo+Panama", lat:8.9344, lng:-79.5444},
+  {name:"Panamá Viejo", tipo:"Ciudad", zona:"Panamá Viejo", distancia:"15 min", capacidad:"300-1000", precio:"$20k-$120k", maps:"https://maps.google.com/?q=Panama+Viejo", lat:9.0050, lng:-79.4855},
+  {name:"Bristol Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"120-300", precio:"$12k-$40k", maps:"https://maps.google.com/?q=Bristol+Panama", lat:8.9812, lng:-79.5228},
+  {name:"W Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"150-450", precio:"$18k-$60k", maps:"https://maps.google.com/?q=W+Panama", lat:8.9829, lng:-79.5206},
+  {name:"Hilton Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"5 min", capacidad:"250-700", precio:"$20k-$90k", maps:"https://maps.google.com/?q=Hilton+Panama", lat:8.9758, lng:-79.5208},
+  {name:"The Westin Panama", tipo:"Ciudad", zona:"Costa del Este", distancia:"15 min", capacidad:"200-500", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Westin+Panama", lat:9.0106, lng:-79.4727},
+  {name:"Intercontinental Miramar Panama", tipo:"Ciudad", zona:"Avenida Balboa", distancia:"5 min", capacidad:"200-500", precio:"$15k-$55k", maps:"https://maps.google.com/?q=Intercontinental+Miramar+Panama", lat:8.9744, lng:-79.5240},
+  {name:"Gran Evenia Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"150-400", precio:"$10k-$35k", maps:"https://maps.google.com/?q=Gran+Evenia+Panama", lat:8.9840, lng:-79.5230},
+
+  {name:"Dreams Playa Bonita Panama", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-500", precio:"$12k-$70k", maps:"https://maps.google.com/?q=Dreams+Playa+Bonita", lat:8.8995, lng:-79.5710},
+  {name:"The Westin Playa Bonita Panama", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-500", precio:"$15k-$80k", maps:"https://maps.google.com/?q=Westin+Playa+Bonita", lat:8.9001, lng:-79.5735},
+  {name:"Playa Bonita Resort", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-300", precio:"$10k-$40k", maps:"https://maps.google.com/?q=Playa+Bonita+Panama", lat:8.9010, lng:-79.5740},
+  {name:"The Buenaventura Golf & Beach Resort", tipo:"Playa", zona:"Buenaventura", distancia:"1h 45m", capacidad:"100-600", precio:"$20k-$120k", maps:"https://maps.google.com/?q=Buenaventura+Panama", lat:8.3850, lng:-80.1210},
+  {name:"Hotel Riu Playa Blanca", tipo:"Playa", zona:"Río Hato", distancia:"2h", capacidad:"150-700", precio:"$10k-$50k", maps:"https://maps.google.com/?q=Riu+Playa+Blanca", lat:8.3566, lng:-80.1449},
+  {name:"Bijao Beach Resort", tipo:"Playa", zona:"Bijao", distancia:"1h 45m", capacidad:"120-400", precio:"$10k-$40k", maps:"https://maps.google.com/?q=Bijao+Beach+Resort", lat:8.3820, lng:-80.1540},
+  {name:"Royal Decameron Panama", tipo:"Playa", zona:"Farallón", distancia:"2h", capacidad:"150-600", precio:"$10k-$45k", maps:"https://maps.google.com/?q=Royal+Decameron+Panama", lat:8.3650, lng:-80.1420},
+  {name:"Nayara Bocas del Toro", tipo:"Playa", zona:"Bocas del Toro", distancia:"vuelo", capacidad:"50-120", precio:"$40k-$150k", maps:"https://maps.google.com/?q=Nayara+Bocas+del+Toro", lat:9.3480, lng:-82.2400},
+  {name:"Isla Palenque Resort", tipo:"Playa", zona:"Chiriquí", distancia:"vuelo + carro", capacidad:"40-120", precio:"$35k-$120k", maps:"https://maps.google.com/?q=Isla+Palenque+Resort", lat:8.1960, lng:-82.3030},
+  {name:"Red Frog Beach Island Resort", tipo:"Playa", zona:"Bocas", distancia:"vuelo", capacidad:"80-250", precio:"$20k-$80k", maps:"https://maps.google.com/?q=Red+Frog+Beach+Resort", lat:9.3370, lng:-82.1740},
+  {name:"Sansara Surf & Yoga Resort", tipo:"Playa", zona:"Cambutal", distancia:"5h", capacidad:"40-120", precio:"$15k-$60k", maps:"https://maps.google.com/?q=Sansara+Cambutal", lat:7.2650, lng:-80.4920},
+  {name:"Playa Venao Hotel Resort", tipo:"Playa", zona:"Venao", distancia:"5h", capacidad:"80-250", precio:"$12k-$50k", maps:"https://maps.google.com/?q=Playa+Venao+Resort", lat:7.4330, lng:-80.1880},
+
+  {name:"Hacienda Country Club Clubhouse", tipo:"Montaña", zona:"Cerro Azul", distancia:"45 min", capacidad:"100-350", precio:"$8k-$30k", maps:"https://maps.google.com/?q=Hacienda+Country+Club+Cerro+Azul", lat:9.1550, lng:-79.4200},
+  {name:"La Semilla Ecolodge", tipo:"Montaña", zona:"Cerro Azul", distancia:"45 min", capacidad:"40-120", precio:"$6k-$20k", maps:"https://maps.google.com/?q=La+Semilla+Cerro+Azul", lat:9.1700, lng:-79.4150},
+  {name:"Hacienda Los Molinos", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"80-250", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Hacienda+Los+Molinos", lat:8.7000, lng:-82.4300},
+  {name:"Valle Escondido Resort", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"100-300", precio:"$15k-$55k", maps:"https://maps.google.com/?q=Valle+Escondido+Boquete", lat:8.7760, lng:-82.4330},
+  {name:"Hotel La Compañía del Valle", tipo:"Montaña", zona:"El Valle", distancia:"2h 30m", capacidad:"80-250", precio:"$18k-$70k", maps:"https://maps.google.com/?q=Hotel+La+Compania+del+Valle", lat:8.6030, lng:-80.1300},
+  {name:"Los Mandarinos Boutique Spa", tipo:"Montaña", zona:"El Valle", distancia:"2h 30m", capacidad:"60-180", precio:"$10k-$35k", maps:"https://maps.google.com/?q=Los+Mandarinos+Panama", lat:8.6000, lng:-80.1270},
+  {name:"Los Establos Boutique Resort", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"50-150", precio:"$18k-$60k", maps:"https://maps.google.com/?q=Los+Establos+Boquete", lat:8.7820, lng:-82.4340},
+  {name:"Hacienda mi Montañita", tipo:"Montaña", zona:"Panamá", distancia:"45 min", capacidad:"80-250", precio:"$6k-$25k", maps:"https://maps.google.com/?q=Hacienda+Mi+Montanita", lat:9.1200, lng:-79.4300},
+
+  {name:"Gamboa Rainforest Reserve", tipo:"Naturaleza", zona:"Gamboa", distancia:"45 min", capacidad:"120-500", precio:"$12k-$45k", maps:"https://maps.google.com/?q=Gamboa+Rainforest+Reserve", lat:9.1160, lng:-79.6960}
 ];
+
+let map = L.map('map').setView([8.8, -79.8], 7);
+let markers = [];
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap'
+}).addTo(map);
 
 function pintarVenues(lista){
   document.getElementById("venueGrid").innerHTML = lista.map(v => `
-    <div class="card">
+    <div class="card venue-card">
       <h3>${v.name}</h3>
-      <p>${v.vibe}</p>
-      <span class="tag">${v.zona}</span>
-      <span class="tag">${v.cap}</span>
+      <p>${v.zona} · ${v.distancia} desde Ciudad de Panamá</p>
+      <span class="tag">${v.tipo}</span>
+      <span class="tag">${v.capacidad} invitados aprox.</span>
       <span class="tag">${v.precio}</span>
+      <br><br>
+      <a href="${v.maps}" target="_blank">Abrir en Google Maps →</a>
     </div>
   `).join("");
 }
 
+function pintarMapa(lista){
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+
+  lista.forEach(v => {
+    const marker = L.marker([v.lat, v.lng])
+      .addTo(map)
+      .bindPopup(`
+        <strong>${v.name}</strong><br>
+        ${v.zona}<br>
+        Capacidad: ${v.capacidad}<br>
+        Precio: ${v.precio}<br>
+        <a href="${v.maps}" target="_blank">Google Maps</a>
+      `);
+    markers.push(marker);
+  });
+
+  if(lista.length > 0){
+    const group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.2));
+  }
+}
+
 function filtrarVenues(){
   const filtro = document.getElementById("venueFilter").value;
-  pintarVenues(filtro === "todos" ? venues : venues.filter(v => v.zona === filtro));
+  const lista = filtro === "todos" ? venues : venues.filter(v => v.tipo === filtro);
+  pintarVenues(lista);
+  pintarMapa(lista);
 }
 
 function crearPlan(){
@@ -188,9 +281,9 @@ function crearPlan(){
   const budget = document.getElementById("budget").value;
 
   let titulo = "Novia Panamá Moderna";
-  if(vibe === "lujo") titulo = "Novia Luxury Editorial";
+  if(vibe === "luxury") titulo = "Novia Luxury Editorial";
   if(vibe === "playa") titulo = "Novia Tropical Destination";
-  if(vibe === "romantica") titulo = "Novia Jardín Romántica";
+  if(vibe === "romántica") titulo = "Novia Jardín Romántica";
 
   document.getElementById("plan").classList.remove("hidden");
   document.getElementById("plan").innerHTML = `
@@ -207,6 +300,7 @@ function crearPlan(){
 }
 
 pintarVenues(venues);
+pintarMapa(venues);
 </script>
 
 </body>
