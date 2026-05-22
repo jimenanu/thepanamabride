@@ -2,108 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Panama Bride</title>
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #f8f5f1;
-      color: #1f1f1f;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f8f4ef; color: #2b2522; }
     .hero {
-      height: 100vh;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');
-
-      background-size: cover;
-      background-position: center;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-
-      padding: 20px;
+      min-height: 100vh; padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; justify-content: center; text-align: center; color: white;
     }
-
-    .hero-content {
-      color: white;
-      max-width: 700px;
+    .box { max-width: 820px; width: 100%; background: rgba(255,255,255,.92); color: #2b2522; padding: 36px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,.2); }
+    .hero .box { background: transparent; color: white; box-shadow: none; }
+    h1 { font-size: clamp(44px, 8vw, 82px); margin-bottom: 18px; }
+    h2 { font-size: 34px; margin-bottom: 14px; }
+    p { font-size: 18px; line-height: 1.6; margin-bottom: 24px; }
+    button, .btn {
+      border: 0; padding: 15px 28px; border-radius: 999px; background: #e7d7c9;
+      color: #2b2522; font-size: 17px; cursor: pointer; font-weight: 600;
     }
-
-    h1 {
-      font-size: 70px;
-      margin-bottom: 20px;
-      font-weight: 600;
+    button:hover, .btn:hover { background: white; }
+    .section { min-height: 100vh; padding: 40px 20px; display: none; align-items: center; justify-content: center; }
+    .question { margin: 22px 0; text-align: left; }
+    label { display: block; margin-bottom: 8px; font-weight: 700; }
+    select, input {
+      width: 100%; padding: 14px; border-radius: 14px; border: 1px solid #d8c7b8; font-size: 16px; background: white;
     }
-
-    p {
-      font-size: 22px;
-      line-height: 1.5;
-      margin-bottom: 35px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 16px 34px;
-      background: #e7d7c9;
-      color: #1f1f1f;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 18px;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background: white;
-      transform: translateY(-2px);
-    }
-
-    @media(max-width: 768px) {
-
-      h1 {
-        font-size: 42px;
-      }
-
-      p {
-        font-size: 18px;
-      }
-
-    }
-
+    .result-card { background: #fffaf5; border: 1px solid #eadbcc; padding: 24px; border-radius: 22px; margin-top: 18px; text-align: left; }
+    ul { margin-left: 22px; line-height: 1.8; }
+    .small { font-size: 14px; opacity: .75; margin-top: 18px; }
+    .pill { display:inline-block; background:#eadbcc; padding:8px 14px; border-radius:999px; margin:4px; font-size:14px; }
   </style>
-
 </head>
-
 <body>
 
-  <section class="hero">
-
-    <div class="hero-content">
-
+  <section class="hero" id="home">
+    <div class="box">
       <h1>The Panama Bride</h1>
-
-      <p>
-        Your modern guide to planning a beautiful wedding in Panama.
-      </p>
-
-      <a href="#" class="btn">
-        Start Planning
-      </a>
-
+      <p>Your modern self-serve guide to planning a beautiful wedding in Panama.</p>
+      <button onclick="showQuiz()">Start Planning</button>
     </div>
-
   </section>
+
+  <section class="section" id="quiz">
+    <div class="box">
+      <h2>Build your wedding roadmap ✨</h2>
+      <p>Answer a few questions and get your first personalized planning guide.</p>
+
+      <div class="question">
+        <label>Estimated guest count</label>
+        <select id="guests">
+          <option value="intimate">Under 50</option>
+          <option value="classic">50–120</option>
+          <option value="large">120+</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>Wedding vibe</label>
+        <select id="vibe">
+          <option value="luxury">Elegant / luxury</option>
+          <option value="tropical">Tropical / beachy</option>
+          <option value="romantic">Romantic / garden</option>
+          <option value="modern">Modern / city</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>Preferred location</label>
+        <select id="location">
+          <option value="city">Panama City</option>
+          <option value="beach">Beach / islands</option>
+          <option value="mountain">Mountain / countryside</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>Budget range</label>
+        <select id="budget">
+          <option value="lean">Keeping it simple</option>
+          <option value="mid">Moderate budget</option>
+          <option value="high">Premium experience</option>
+        </select>
+      </div>
+
+      <button onclick="generateResult()">Get My Plan</button>
+    </div>
+  </section>
+
+  <section class="section" id="result">
+    <div class="box">
+      <h2>Your Panama wedding roadmap 💍</h2>
+      <div id="resultContent"></div>
+      <br>
+      <button onclick="restart()">Start Over</button>
+      <p class="small">Next: premium planning kit, vendor comparison sheet, venue questions, and budget tracker.</p>
+    </div>
+  </section>
+
+  <script>
+    function showQuiz() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("quiz").style.display = "flex";
+    }
+
+    function generateResult() {
+      const guests = document.getElementById("guests").value;
+      const vibe = document.getElementById("vibe").value;
+      const location = document.getElementById("location").value;
+      const budget = document.getElementById("budget").value;
+
+      let title = "The Classic Panama Bride";
+      let venue = "hotel ballroom, elegant restaurant, or private event space";
+      let priorities = ["Venue availability", "Guest experience", "Photography", "Music"];
+
+      if (location === "beach") {
+        title = "The Tropical Destination Bride";
+        venue = "beachfront venue, island hotel, or coastal villa";
+        priorities = ["Weather backup plan", "Guest transportation", "Sunset timing", "Simple tropical décor"];
+      }
+
+      if (location === "mountain") {
+        title = "The Romantic Escape Bride";
+        venue = "garden venue, mountain lodge, or countryside estate";
+        priorities = ["Outdoor logistics", "Floral design", "Guest transportation", "Lighting"];
+      }
+
+      if (vibe === "luxury") {
+        priorities.push("Full-service planner");
+      }
+
+      if (budget === "lean") {
+        priorities.push("Prioritize fewer vendors with higher impact");
+      }
+
+      document.getElementById("quiz").style.display = "none";
+      document.getElementById("result").style.display = "flex";
+
+      document.getElementById("resultContent").innerHTML = `
+        <div class="result-card">
+          <h2>${title}</h2>
+          <p><strong>Suggested venue type:</strong> ${venue}.</p>
+          <p>
+            <span class="pill">${guests} wedding</span>
+            <span class="pill">${vibe} vibe</span>
+            <span class="pill">${location}</span>
+            <span class="pill">${budget} budget</span>
+          </p>
+          <h3>Start with this checklist:</h3>
+          <ul>
+            <li>Define your guest count and non-negotiable budget.</li>
+            <li>Choose your preferred wedding area and backup option.</li>
+            <li>Request quotes from 3 venues before booking vendors.</li>
+            <li>Ask venues about food, alcohol, corkage, music limits, parking, and rain plan.</li>
+            <li>Book photo/video early if your date is high season.</li>
+          </ul>
+          <h3>Your top priorities:</h3>
+          <ul>${priorities.map(item => `<li>${item}</li>`).join("")}</ul>
+        </div>
+      `;
+    }
+
+    function restart() {
+      document.getElementById("result").style.display = "none";
+      document.getElementById("home").style.display = "flex";
+    }
+  </script>
 
 </body>
 </html>
