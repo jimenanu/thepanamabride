@@ -1,235 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Panama Bride</title>
+  <title>The Panama Bride | Guía de bodas en Panamá</title>
+  <meta name="description" content="Guía moderna para planificar bodas en Panamá: venues, bridal showers, vestidos, checklist, presupuesto y planner personalizado." />
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #f8f4ef; color: #2b2522; }
-    .hero {
-      min-height: 100vh; padding: 40px 20px;
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover; background-position: center;
-      display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-    }
-    .box { max-width: 820px; width: 100%; background: rgba(255,255,255,.92); color: #2b2522; padding: 36px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,.2); }
-    .hero .box { background: transparent; color: white; box-shadow: none; }
-    h1 { font-size: clamp(44px, 8vw, 82px); margin-bottom: 18px; }
-    h2 { font-size: 34px; margin-bottom: 14px; }
-    p { font-size: 18px; line-height: 1.6; margin-bottom: 24px; }
-    button, .btn {
-      border: 0; padding: 15px 28px; border-radius: 999px; background: #e7d7c9;
-      color: #2b2522; font-size: 17px; cursor: pointer; font-weight: 600;
-    }
-    button:hover, .btn:hover { background: white; }
-    .section { min-height: 100vh; padding: 40px 20px; display: none; align-items: center; justify-content: center; }
-    .question { margin: 22px 0; text-align: left; }
-    label { display: block; margin-bottom: 8px; font-weight: 700; }
-    select, input {
-      width: 100%; padding: 14px; border-radius: 14px; border: 1px solid #d8c7b8; font-size: 16px; background: white;
-    }
-    .result-card { background: #fffaf5; border: 1px solid #eadbcc; padding: 24px; border-radius: 22px; margin-top: 18px; text-align: left; }
-    ul { margin-left: 22px; line-height: 1.8; }
-    .small { font-size: 14px; opacity: .75; margin-top: 18px; }
-    .pill { display:inline-block; background:#eadbcc; padding:8px 14px; border-radius:999px; margin:4px; font-size:14px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#f7f1ea;color:#2f2925}
+    nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(255,250,245,.92);backdrop-filter:blur(12px);padding:14px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ead9c8}
+    nav a{color:#2f2925;text-decoration:none;margin-left:18px;font-size:14px}
+    .brand{font-family:Georgia,serif;font-size:24px}
+    .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:90px 20px 50px}
+    h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,90px);font-weight:400;margin-bottom:18px}
+    h2{font-family:Georgia,serif;font-size:38px;margin-bottom:16px;font-weight:400}
+    h3{font-family:Georgia,serif;font-size:24px;margin-bottom:10px}
+    p{font-size:18px;line-height:1.6;margin-bottom:22px}
+    .btn,button{border:0;background:#d8b98c;color:#2f2925;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;display:inline-block;margin:6px}
+    .btn.alt{background:#fff7ef}
+    section{padding:80px 7%}
+    .center{text-align:center;max-width:850px;margin:auto}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:30px}
+    .card{background:#fffaf5;border:1px solid #ead9c8;border-radius:26px;padding:24px;box-shadow:0 12px 30px rgba(70,50,35,.08)}
+    .tag{display:inline-block;background:#efe0cf;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
+    select,input{width:100%;padding:13px;border-radius:14px;border:1px solid #d8c5b1;margin:8px 0 16px;background:white}
+    .hidden{display:none}
+    ul{margin-left:20px;line-height:1.8}
+    .premium{background:#2f2925;color:#fff7ef}
+    footer{text-align:center;padding:40px;background:#201b18;color:#fff7ef;font-size:14px}
+    .small{font-size:13px;opacity:.75}
   </style>
 </head>
+
 <body>
 
-  <section class="hero" id="home">
-    <div class="box">
-      <h1>The Panama Bride</h1>
-      <p>Your modern self-serve guide to planning a beautiful wedding in Panama.</p>
-      <button onclick="showQuiz()">Start Planning</button>
-      <br><br>
+<nav>
+  <div class="brand">The Panama Bride</div>
+  <div>
+    <a href="#planner">Planner</a>
+    <a href="#venues">Venues</a>
+    <a href="#brunch">Bridal Shower</a>
+    <a href="#fashion">Vestidos</a>
+    <a href="#premium">Premium</a>
+  </div>
+</nav>
 
-<a href="#explore" class="btn">
-  Explore Wedding Inspiration
-</a>
-    </div>
-  </section>
+<section class="hero">
+  <div class="center">
+    <h1>The Panama Bride</h1>
+    <p>La guía moderna, bonita y práctica para planificar tu boda en Panamá sin perderte en mil chats, PDFs y cotizaciones.</p>
+    <a class="btn" href="#planner">Empezar mi planner</a>
+    <a class="btn alt" href="#venues">Ver venues</a>
+  </div>
+</section>
 
-  <section class="section" id="quiz">
-    <div class="box">
-      <h2>Build your wedding roadmap ✨</h2>
-      <p>Answer a few questions and get your first personalized planning guide.</p>
-
-      <div class="question">
-        <label>Estimated guest count</label>
-        <select id="guests">
-          <option value="intimate">Under 50</option>
-          <option value="classic">50–120</option>
-          <option value="large">120+</option>
-        </select>
-      </div>
-
-      <div class="question">
-        <label>Wedding vibe</label>
-        <select id="vibe">
-          <option value="luxury">Elegant / luxury</option>
-          <option value="tropical">Tropical / beachy</option>
-          <option value="romantic">Romantic / garden</option>
-          <option value="modern">Modern / city</option>
-        </select>
-      </div>
-
-      <div class="question">
-        <label>Preferred location</label>
-        <select id="location">
-          <option value="city">Panama City</option>
-          <option value="beach">Beach / islands</option>
-          <option value="mountain">Mountain / countryside</option>
-        </select>
-      </div>
-
-      <div class="question">
-        <label>Budget range</label>
-        <select id="budget">
-          <option value="lean">Keeping it simple</option>
-          <option value="mid">Moderate budget</option>
-          <option value="high">Premium experience</option>
-        </select>
-      </div>
-
-      <button onclick="generateResult()">Get My Plan</button>
-    </div>
-  </section>
-<section class="section" id="explore" style="display:flex; background:#f8f4ef;">
-
-  <div class="box">
-
-    <h2>Explore Panama Wedding Inspiration ✨</h2>
-
-    <p>
-      Discover venues, bridal shower spots, wedding styles, and planning inspiration across Panama.
-    </p>
-
-    <div class="result-card">
-
-      <h3>💍 Wedding Venues</h3>
-
-      <ul>
-        <li><strong>Villa Ana</strong> — Elegant garden weddings · ~150 guests · $$$</li>
-        <li><strong>American Trade Hotel</strong> — Boutique luxury in Casco · ~120 guests · $$$$</li>
-        <li><strong>Buenaventura</strong> — Beach resort weddings · 80–300 guests · $$$$</li>
-        <li><strong>Santa María Hotel</strong> — Modern ballroom weddings · 150–400 guests · $$$$</li>
-      </ul>
-
-    </div>
-
-    <br>
-
-    <div class="result-card">
-
-      <h3>🥂 Bridal Shower Spots</h3>
-
-      <ul>
-        <li>Private brunch at Casco cafés</li>
-        <li>Rooftop dinners in Bella Vista</li>
-        <li>Beach club gatherings</li>
-        <li>Garden tea parties</li>
-      </ul>
-
-    </div>
-
-    <br>
-
-    <div class="result-card">
-
-      <h3>👗 Bridal Fashion</h3>
-
-      <ul>
-        <li>Local bridal boutiques</li>
-        <li>Luxury gown rentals</li>
-        <li>Custom wedding dress designers</li>
-        <li>Bridesmaid styling inspiration</li>
-      </ul>
-
-    </div>
-
+<section id="planner">
+  <div class="center">
+    <h2>Arma tu roadmap de boda</h2>
+    <p>Responde rápido y recibe una primera guía según tu estilo, invitados y presupuesto.</p>
   </div>
 
+  <div class="card center">
+    <label>Invitados estimados</label>
+    <select id="guests">
+      <option value="intima">Menos de 50</option>
+      <option value="media">50–120</option>
+      <option value="grande">120+</option>
+    </select>
+
+    <label>Estilo</label>
+    <select id="vibe">
+      <option value="lujo">Elegante / luxury</option>
+      <option value="playa">Tropical / playa</option>
+      <option value="romantica">Romántica / jardín</option>
+      <option value="moderna">Moderna / ciudad</option>
+    </select>
+
+    <label>Presupuesto</label>
+    <select id="budget">
+      <option value="simple">Simple pero lindo</option>
+      <option value="medio">Intermedio</option>
+      <option value="premium">Premium</option>
+    </select>
+
+    <button onclick="crearPlan()">Ver mi plan</button>
+
+    <div id="plan" class="card hidden"></div>
+  </div>
 </section>
-  <section class="section" id="result">
-    <div class="box">
-      <h2>Your Panama wedding roadmap 💍</h2>
-      <div id="resultContent"></div>
-      <br>
-      <button onclick="restart()">Start Over</button>
-      <p class="small">Next: premium planning kit, vendor comparison sheet, venue questions, and budget tracker.</p>
+
+<section id="venues">
+  <div class="center">
+    <h2>Venues en Panamá</h2>
+    <p>Referencias iniciales para comparar estilo, capacidad y presupuesto estimado.</p>
+
+    <select id="venueFilter" onchange="filtrarVenues()">
+      <option value="todos">Ver todos</option>
+      <option value="ciudad">Ciudad</option>
+      <option value="playa">Playa</option>
+      <option value="jardin">Jardín / naturaleza</option>
+      <option value="intimo">Íntimo</option>
+    </select>
+  </div>
+
+  <div class="grid" id="venueGrid"></div>
+</section>
+
+<section id="brunch">
+  <div class="center">
+    <h2>Bridal showers & brindis</h2>
+    <p>Ideas para celebrar antes de la boda: brunch, té, rooftop, cena íntima o beach day.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>Brunch elegante</h3><p>Ideal para 15–40 personas.</p><span class="tag">$$</span><span class="tag">Fotos cute</span></div>
+    <div class="card"><h3>Rooftop / cena privada</h3><p>Perfecto para brindis con amigas o familia.</p><span class="tag">$$$</span><span class="tag">Noche</span></div>
+    <div class="card"><h3>Garden tea party</h3><p>Más romántico, íntimo y editorial.</p><span class="tag">$$</span><span class="tag">Día</span></div>
+    <div class="card"><h3>Beach club</h3><p>Para una novia más tropical y relaxed.</p><span class="tag">$$$</span><span class="tag">Playa</span></div>
+  </div>
+</section>
+
+<section id="fashion">
+  <div class="center">
+    <h2>Vestidos & bridal fashion</h2>
+    <p>Checklist de dónde buscar: boutiques, diseñadores, alquiler, vestidos civiles y accesorios.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>Vestido principal</h3><ul><li>Comprar con 6–9 meses</li><li>Preguntar por ajustes</li><li>Confirmar tiempos de entrega</li></ul></div>
+    <div class="card"><h3>Vestido civil</h3><ul><li>Look corto o midi</li><li>Blanco moderno</li><li>Perfecto para fotos en Casco</li></ul></div>
+    <div class="card"><h3>Accesorios</h3><ul><li>Velo</li><li>Zapatos cómodos</li><li>Aretes statement</li><li>Segundo look</li></ul></div>
+  </div>
+</section>
+
+<section id="premium" class="premium">
+  <div class="center">
+    <h2>Kit Premium de Planificación</h2>
+    <p>Próximamente: presupuesto editable, checklist completo, preguntas para venues, comparación de proveedores y guía PDF.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="card">
+      <h3>Únete a la lista de espera</h3>
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <input type="text" name="wedding_date" placeholder="Fecha tentativa de boda">
+      <button type="submit">Quiero el kit</button>
+      <p class="small">Cambiaremos este formulario por tu Formspree real después.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  The Panama Bride · Guía independiente para planificación de bodas en Panamá.<br>
+  <span class="small">Precios y capacidades son referenciales y deben confirmarse directamente con cada proveedor.</span>
+</footer>
+
+<script>
+const venues = [
+  {name:"The Santa María Hotel", zona:"ciudad", cap:"Hasta 515 aprox.", precio:"$$$$", vibe:"Ballroom elegante, hotel luxury, ideal para bodas grandes."},
+  {name:"Hotel La Compañía", zona:"ciudad", cap:"48–450 aprox.", precio:"$$$$", vibe:"Casco Antiguo, histórico, editorial y premium."},
+  {name:"American Trade Hotel", zona:"intimo", cap:"Consultar", precio:"$$$$", vibe:"Boutique, Casco, perfecto para bodas íntimas con mucho estilo."},
+  {name:"Buenaventura", zona:"playa", cap:"Hasta 600 aprox.", precio:"$$$$", vibe:"Destination wedding, playa, resort y experiencia completa."},
+  {name:"Summit Rainforest", zona:"jardin", cap:"Hasta 250 aprox.", precio:"$$$", vibe:"Naturaleza, tropical, jardín y ambiente rainforest."},
+  {name:"Villa Ana", zona:"intimo", cap:"Consultar", precio:"$$$", vibe:"Casco, mansión restaurada, cenas y celebraciones íntimas."}
+];
+
+function pintarVenues(lista){
+  document.getElementById("venueGrid").innerHTML = lista.map(v => `
+    <div class="card">
+      <h3>${v.name}</h3>
+      <p>${v.vibe}</p>
+      <span class="tag">${v.zona}</span>
+      <span class="tag">${v.cap}</span>
+      <span class="tag">${v.precio}</span>
     </div>
-  </section>
+  `).join("");
+}
 
-  <script>
-    function showQuiz() {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("quiz").style.display = "flex";
-    }
+function filtrarVenues(){
+  const filtro = document.getElementById("venueFilter").value;
+  pintarVenues(filtro === "todos" ? venues : venues.filter(v => v.zona === filtro));
+}
 
-    function generateResult() {
-      const guests = document.getElementById("guests").value;
-      const vibe = document.getElementById("vibe").value;
-      const location = document.getElementById("location").value;
-      const budget = document.getElementById("budget").value;
+function crearPlan(){
+  const guests = document.getElementById("guests").value;
+  const vibe = document.getElementById("vibe").value;
+  const budget = document.getElementById("budget").value;
 
-      let title = "The Classic Panama Bride";
-      let venue = "hotel ballroom, elegant restaurant, or private event space";
-      let priorities = ["Venue availability", "Guest experience", "Photography", "Music"];
+  let titulo = "Novia Panamá Moderna";
+  if(vibe === "lujo") titulo = "Novia Luxury Editorial";
+  if(vibe === "playa") titulo = "Novia Tropical Destination";
+  if(vibe === "romantica") titulo = "Novia Jardín Romántica";
 
-      if (location === "beach") {
-        title = "The Tropical Destination Bride";
-        venue = "beachfront venue, island hotel, or coastal villa";
-        priorities = ["Weather backup plan", "Guest transportation", "Sunset timing", "Simple tropical décor"];
-      }
+  document.getElementById("plan").classList.remove("hidden");
+  document.getElementById("plan").innerHTML = `
+    <h3>${titulo}</h3>
+    <p>Tu boda se perfila como una celebración <strong>${vibe}</strong>, de tamaño <strong>${guests}</strong>, con presupuesto <strong>${budget}</strong>.</p>
+    <ul>
+      <li>Primero define invitados y presupuesto máximo.</li>
+      <li>Cotiza mínimo 3 venues antes de separar fecha.</li>
+      <li>Pregunta por comida, descorche, lluvia, música, parking y hora límite.</li>
+      <li>Reserva foto/video temprano si es temporada alta.</li>
+      <li>Guarda todo en una hoja comparativa antes de decidir.</li>
+    </ul>
+  `;
+}
 
-      if (location === "mountain") {
-        title = "The Romantic Escape Bride";
-        venue = "garden venue, mountain lodge, or countryside estate";
-        priorities = ["Outdoor logistics", "Floral design", "Guest transportation", "Lighting"];
-      }
-
-      if (vibe === "luxury") {
-        priorities.push("Full-service planner");
-      }
-
-      if (budget === "lean") {
-        priorities.push("Prioritize fewer vendors with higher impact");
-      }
-
-      document.getElementById("quiz").style.display = "none";
-      document.getElementById("result").style.display = "flex";
-
-      document.getElementById("resultContent").innerHTML = `
-        <div class="result-card">
-          <h2>${title}</h2>
-          <p><strong>Suggested venue type:</strong> ${venue}.</p>
-          <p>
-            <span class="pill">${guests} wedding</span>
-            <span class="pill">${vibe} vibe</span>
-            <span class="pill">${location}</span>
-            <span class="pill">${budget} budget</span>
-          </p>
-          <h3>Start with this checklist:</h3>
-          <ul>
-            <li>Define your guest count and non-negotiable budget.</li>
-            <li>Choose your preferred wedding area and backup option.</li>
-            <li>Request quotes from 3 venues before booking vendors.</li>
-            <li>Ask venues about food, alcohol, corkage, music limits, parking, and rain plan.</li>
-            <li>Book photo/video early if your date is high season.</li>
-          </ul>
-          <h3>Your top priorities:</h3>
-          <ul>${priorities.map(item => `<li>${item}</li>`).join("")}</ul>
-        </div>
-      `;
-    }
-
-    function restart() {
-      document.getElementById("result").style.display = "none";
-      document.getElementById("home").style.display = "flex";
-    }
-  </script>
+pintarVenues(venues);
+</script>
 
 </body>
 </html>
