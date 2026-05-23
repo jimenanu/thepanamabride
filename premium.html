@@ -67,12 +67,12 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" onclick="showTab('planners', this)">Wedding Planners</button>
-    <button class="tab" onclick="showTab('photos', this)">Fotos</button>
-    <button class="tab" onclick="showTab('court', this)">Trajes Corte</button>
-    <button class="tab" onclick="showTab('moms', this)">Mamá de Novia</button>
-    <button class="tab" onclick="showTab('decor', this)">Decoradores</button>
-    <button class="tab" onclick="showTab('budget', this)">Presupuesto</button>
+    <button class="tab active" id="tab-planners" onclick="showTab('planners')">Wedding Planners</button>
+    <button class="tab" id="tab-photos" onclick="showTab('photos')">Fotos</button>
+    <button class="tab" id="tab-court" onclick="showTab('court')">Trajes Corte</button>
+    <button class="tab" id="tab-moms" onclick="showTab('moms')">Mamá de Novia</button>
+    <button class="tab" id="tab-decor" onclick="showTab('decor')">Decoradores</button>
+    <button class="tab" id="tab-budget" onclick="showTab('budget')">Presupuesto</button>
   </div>
 
   <div id="content"></div>
@@ -239,24 +239,25 @@ function unlock(){
   if(code === ACCESS_CODE){
     document.getElementById("paywall").classList.add("hidden");
     document.getElementById("dashboard").classList.remove("hidden");
-    renderPlanners();
+    showTab("planners");
   } else {
     alert("Código incorrecto");
   }
 }
 
-function setActive(btn){
+function setActive(tab){
   document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
+  document.getElementById("tab-" + tab).classList.add("active");
 }
 
-function showTab(tab, btn){
-  setActive(btn);
+function showTab(tab){
+  setActive(tab);
+
   if(tab === "planners") renderPlanners();
-  if(tab === "photos") renderCards("Lugares para fotos", data.photos);
+  if(tab === "photos") renderCards("Fotos", data.photos);
   if(tab === "court") renderCards("Trajes para la corte", data.court);
   if(tab === "moms") renderCards("Mamá de novia", data.moms);
-  if(tab === "decor") renderCards("Decoradores & estilos", data.decor);
+  if(tab === "decor") renderCards("Decoradores", data.decor);
   if(tab === "budget") renderBudget();
 }
 
