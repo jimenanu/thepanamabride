@@ -31,6 +31,18 @@
     .muted{font-size:13px;color:#b8aaa0}
     .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .footer{margin-top:40px;color:#b8aaa0;font-size:13px}
+    .decor-list{
+  display:grid;
+  gap:16px;
+  margin-top:20px
+}
+
+@media(max-width:850px){
+  .decor-list .card{
+    grid-template-columns:1fr !important
+  }
+}
+</style>
   </style>
 </head>
 
@@ -163,13 +175,59 @@ const data = {
     ["Mamá de novia en rose gold","Suave, femenino, elegante","Ideal recepción"],
     ["Mamá de novia en silver","Formal, timeless","Muy gala"]
   ],
-  decor: [
-    ["Candlelight dinner","Velas, mesas largas, flores blancas","Luxury editorial"],
-    ["Tropical minimal","Verde, blanco, madera clara","Panamá moderno"],
-    ["Garden romance","Flores suaves, luces cálidas, texturas","Romántico"],
-    ["Beach chic","Lino, conchas sutiles, palmas","Destination wedding"],
-    ["Black tie glam","Negro, dorado, cristalería, velas","Hotel ballroom"]
-  ]
+decor: [
+  ["Pompa by Carlos Mastellari","Luxury Event Design","DM Instagram","IG: @pompaevents","Luxury / Design"],
+  ["PRP Events","Decoración & Styling","+507 6690-7472","https://www.prpevents.com","Styling"],
+  ["Regina Events","Wedding Styling","DM Instagram","IG: @reginaeventspty","Wedding Styling"],
+  ["Jenny Polonsky Events","Luxury Weddings","DM Instagram","https://www.jpluxuryevents.com","Luxury"],
+  ["Très Chic Planners","Event Design","DM Instagram","IG: @treschicplanners","Design"],
+  ["Lala Event Designers","Decoración","Web Contact","https://www.lalapanama.com","Decoración"],
+  ["The Planners Firm","Weddings & Decor","DM Instagram","IG: @theplannersfirm","Weddings"],
+  ["Trust Events Co.","Wedding Design","DM Instagram","IG: @trusteventsco","Wedding Design"],
+  ["Eventos Gaby","Decoración","+507 local","IG: @eventosgabypty","Decoración"],
+  ["Creaciones y Eventos AG","Decoración","DM Instagram","IG: @creacionesyeventosag","Decoración"],
+  ["Aquamarina Eventos","Producción","+507 392-8496","IG: @aquamarinaeventos","Producción"],
+  ["Eventi Panamá","Luxury Events","DM Instagram","IG: @eventipanama","Luxury"],
+  ["Event Concepts Panamá","Event Production","DM Instagram","IG: @eventconceptspty","Producción"],
+  ["Magic Dreams PTY","Decoración","DM Instagram","IG: @magicdreamspty","Decoración"],
+  ["Balloon Factory Panamá","Globos & Styling","DM Instagram","IG: @balloonfactorypty","Globos"],
+  ["Glam Factory PTY","Event Decor","DM Instagram","IG: @glamfactorypty","Decoración"],
+  ["Casa de las Flores Panamá","Flores","+507 local","IG: @casadelasflorespty","Flores"],
+  ["Flores Panamá","Floristería","Web Contact","IG: @florespanama","Flores"],
+  ["Floristería Ancón","Flores/Eventos","+507 local","IG/Facebook local","Flores"],
+  ["Fleurs Panamá","Luxury Florals","DM Instagram","IG: @fleurspanama","Florals"],
+  ["Boho Flowers PTY","Flores boho","DM Instagram","IG: @bohoflowerspty","Boho"],
+  ["The Flower Shop Panamá","Floristería","DM Instagram","IG: @theflowershoppty","Flores"],
+  ["Plantas y Jardines Panamá","Plantas","Facebook","Facebook local","Plantas"],
+  ["Vivero Panamá","Plantas tropicales","+507 local","Facebook local","Plantas"],
+  ["Vivero Cerro Azul","Plantas/Eventos","Local","Facebook local","Plantas"],
+  ["Green Garden Panamá","Plantas decorativas","DM Instagram","IG local","Plantas"],
+  ["Rent a Lounge Panamá","Lounge Furniture","DM Instagram","IG: @rentaloungepty","Mobiliario"],
+  ["Lounge Design Panamá","Furniture Rental","DM Instagram","IG local","Mobiliario"],
+  ["Event Rentals Panamá","Mobiliario","Web Contact","IG local","Mobiliario"],
+  ["Deco Rental Panamá","Furniture & Decor","DM Instagram","IG local","Mobiliario"],
+  ["Mobi Eventos Panamá","Muebles eventos","DM Instagram","Facebook local","Mobiliario"],
+  ["Party Rent Panamá","Rental","+507 local","IG/Facebook","Rental"],
+  ["Grupo Eventos Panamá","Producción","Web Contact","IG local","Producción"],
+  ["Audio Foto Panamá","Iluminación/Eventos","+507 local","audiofoto.com","Iluminación"],
+  ["AV Events Panamá","AV & Lighting","DM Instagram","IG local","Iluminación"],
+  ["Glow Events Panamá","Iluminación","DM Instagram","IG local","Iluminación"],
+  ["Panamá Eventos y Bodas","Decoración","Facebook","Facebook local","Decoración"],
+  ["Decoraciones Rosy","Decoración social","Local","Facebook local","Decoración"],
+  ["DecorArte Panamá","Event styling","DM Instagram","IG local","Styling"],
+  ["Casa Ideas Panamá","Decor props","tiendas","casideas.com","Retail"],
+  ["Aliss Panamá","Decoración","tiendas","aliss.com","Retail"],
+  ["Conway Panamá","Hogar/decor","tiendas","conway.com.pa","Retail"],
+  ["Novey Panamá","Decor/event props","tiendas","novey.com.pa","Retail"],
+  ["Do It Center Panamá","Decor/build","tiendas","doitcenter.com.pa","Retail"],
+  ["IKEA Panamá","Furniture/decor","tiendas","ikea.com","Retail"],
+  ["Madison Home Panamá","Luxury decor","IG local","Instagram","Luxury Decor"],
+  ["Maison by Fendi Casa Panamá","Luxury furniture","showroom","Instagram","Luxury Furniture"],
+  ["Roche Bobois Panamá","Luxury furniture","showroom","roche-bobois.com","Luxury Furniture"],
+  ["Natuzzi Panamá","Luxury furniture","showroom","natuzzi.com","Luxury Furniture"],
+  ["Ambiente Floral Panamá","Florals","DM Instagram","Instagram local","Florals"],
+  ["Bohemia Eventos Panamá","Boho rentals","DM Instagram","Instagram local","Boho"]
+]
 };
 
 function unlock(){
@@ -222,6 +280,7 @@ function renderPlanners(){
 function renderCards(title, items){
   const isPhotos = title.includes("Fotos");
   const isCourt = title.includes("Trajes para la corte");
+  const isDecor = title.includes("Decoradores");
 
   if(isPhotos){
     document.getElementById("content").innerHTML = `
@@ -246,6 +305,75 @@ function renderCards(title, items){
     `;
     return;
   }
+
+  if(isCourt){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>${title}</h2>
+        <p>Directorio premium para vestidos de corte, invitadas, damas, gala y looks modernos en Panamá.</p>
+        <label>Filtrar por tipo</label>
+        <select id="courtFilter" onchange="filterCourt()">
+          <option value="todos">Ver todos</option>
+          <option value="Bridal">Bridal</option>
+          <option value="Gala">Gala</option>
+          <option value="Boutique">Boutique</option>
+          <option value="Couture">Couture</option>
+          <option value="Designer">Designer</option>
+          <option value="Minimal">Minimal</option>
+          <option value="Budget">Budget</option>
+          <option value="Provincias">Provincias</option>
+        </select>
+        <div id="courtCards" class="grid"></div>
+      </div>
+    `;
+    renderCourtCards(items);
+    return;
+  }
+
+  if(isDecor){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>${title}</h2>
+        <p>Directorio premium de decoradores, floristas, mobiliario, producción, iluminación y props para bodas en Panamá.</p>
+
+        <label>Filtrar por categoría</label>
+        <select id="decorFilter" onchange="filterDecor()">
+          <option value="todos">Ver todos</option>
+          <option value="Luxury">Luxury</option>
+          <option value="Decoración">Decoración</option>
+          <option value="Flores">Flores</option>
+          <option value="Florals">Florals</option>
+          <option value="Mobiliario">Mobiliario</option>
+          <option value="Producción">Producción</option>
+          <option value="Iluminación">Iluminación</option>
+          <option value="Plantas">Plantas</option>
+          <option value="Boho">Boho</option>
+          <option value="Retail">Retail</option>
+        </select>
+
+        <div id="decorCards" class="decor-list"></div>
+      </div>
+    `;
+    renderDecorCards(items);
+    return;
+  }
+
+  document.getElementById("content").innerHTML = `
+    <div class="card">
+      <h2>${title}</h2>
+      <p>Ideas curadas para inspiración y comparación inicial.</p>
+    </div>
+    <div class="grid">
+      ${items.map(i => `
+        <div class="card">
+          <h3>${i[0]}</h3>
+          <p>${i[1]}</p>
+          <span class="tag">${i[2]}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
 
   if(isCourt){
     document.getElementById("content").innerHTML = `
@@ -312,7 +440,34 @@ function filterCourt(){
     renderCourtCards(all.filter(i => i[5].toLowerCase().includes(filter.toLowerCase())));
   }
 }
+function renderDecorCards(items){
+  document.getElementById("decorCards").innerHTML = items.map(i => `
+    <div class="card" style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;align-items:center;">
+      <div>
+        <h3>${i[0]}</h3>
+        <span class="tag">${i[4]}</span>
+        <span class="tag">${i[1]}</span>
+      </div>
+      <div>
+        <p><strong>Contacto:</strong><br>${i[2]}</p>
+        <p><strong>Website / Redes:</strong><br>${i[3]}</p>
+      </div>
+      <div>
+        <p class="muted">Ideal para comparar opciones de decoración, flores, mobiliario y producción.</p>
+      </div>
+    </div>
+  `).join("");
+}
 
+function filterDecor(){
+  const filter = document.getElementById("decorFilter").value;
+  const all = data.decor;
+  if(filter === "todos"){
+    renderDecorCards(all);
+  } else {
+    renderDecorCards(all.filter(i => i[4].toLowerCase().includes(filter.toLowerCase()) || i[1].toLowerCase().includes(filter.toLowerCase())));
+  }
+}
 function renderBudget(){
   document.getElementById("content").innerHTML = `
     <div class="card">
