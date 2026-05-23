@@ -78,37 +78,109 @@
 </section>
 
 <section id="planner">
+
   <div class="center">
-    <h2>Arma tu roadmap de boda</h2>
-    <p>Responde rápido y recibe una primera guía según tu estilo, invitados y presupuesto.</p>
+  <h2>Descubre el perfil de tu boda ✨</h2>
+
+  <p style="max-width:850px;margin:auto;">
+    Creamos una primera guía personalizada basada en su estilo,
+    presupuesto, invitados y visión de boda en Panamá.
+  </p>
+</div>
+
+<div class="card center" style="margin-top:40px;text-align:left;max-width:1100px;">
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+
+    <div>
+      <label>Nombre de la novia</label>
+      <input type="text" id="brideName" placeholder="Ej. Sofía">
+
+      <label>Edad</label>
+      <select id="age" required>
+        <option>20-24</option>
+        <option>25-29</option>
+        <option>30-34</option>
+        <option>35-40</option>
+        <option>40+</option>
+      </select>
+
+      <label>¿Dónde viven actualmente?</label>
+      <select id="location">
+        <option>Panamá</option>
+        <option>Estados Unidos</option>
+        <option>Canadá</option>
+        <option>Europa</option>
+        <option>Latinoamérica</option>
+        <option>Otro</option>
+      </select>
+
+      <label>¿Será destination wedding?</label>
+      <select id="destination">
+        <option>Sí</option>
+        <option>No</option>
+        <option>Tal vez</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Invitados estimados</label>
+      <select id="guests">
+        <option value="íntima">Menos de 50</option>
+        <option value="media">50–120</option>
+        <option value="grande">120+</option>
+      </select>
+
+      <label>Estilo principal</label>
+      <select id="vibe">
+        <option value="luxury">Luxury editorial</option>
+        <option value="playa">Tropical / playa</option>
+        <option value="romántica">Romántica / jardín</option>
+        <option value="moderna">Moderna / ciudad</option>
+        <option value="oldmoney">Old money</option>
+        <option value="european">European summer</option>
+      </select>
+
+      <label>Presupuesto</label>
+      <select id="budget">
+        <option value="simple">Simple pero lindo</option>
+        <option value="medio">Intermedio</option>
+        <option value="premium">Premium</option>
+        <option value="luxury">Luxury alto</option>
+      </select>
+
+      <label>Prioridad principal</label>
+      <select id="priority">
+        <option>Venue</option>
+        <option>Decoración</option>
+        <option>Foto / video</option>
+        <option>Experiencia invitados</option>
+        <option>Moda / vestidos</option>
+        <option>Comida & bebidas</option>
+      </select>
+    </div>
+
   </div>
 
-  <div class="card center">
-    <label>Invitados estimados</label>
-    <select id="guests">
-      <option value="íntima">Menos de 50</option>
-      <option value="media">50–120</option>
-      <option value="grande">120+</option>
-    </select>
+  <div style="margin-top:30px;text-align:center;">
 
-    <label>Estilo</label>
-    <select id="vibe">
-      <option value="luxury">Elegante / luxury</option>
-      <option value="playa">Tropical / playa</option>
-      <option value="romántica">Romántica / jardín</option>
-      <option value="moderna">Moderna / ciudad</option>
-    </select>
+    <div style="margin-bottom:18px;">
+      <span class="tag">✨ Personalized wedding profile</span>
+      <span class="tag">📍 Panamá insights</span>
+      <span class="tag">💰 Budget guidance</span>
+      <span class="tag">📸 Pinterest vibes</span>
+    </div>
 
-    <label>Presupuesto</label>
-    <select id="budget">
-      <option value="simple">Simple pero lindo</option>
-      <option value="medio">Intermedio</option>
-      <option value="premium">Premium</option>
-    </select>
+    <button onclick="crearPlan()" style="font-size:16px;padding:16px 34px;">
+      Ver mi roadmap
+    </button>
 
-    <button onclick="crearPlan()">Ver mi plan</button>
-    <div id="plan" class="card hidden"></div>
   </div>
+
+  <div id="plan" class="card hidden" style="margin-top:35px;"></div>
+
+</div>
+  
 </section>
 
 <section id="venues">
@@ -338,7 +410,7 @@ function filtrarVenues(){
   if(!filtro){
     document.getElementById("venueGrid").innerHTML = `
       <div class="card">
-        <h3>Selecciona una categoría ✨</h3>
+        <h3>Selecciona una categoría</h3>
         <p>Escoge Ciudad, Playa, Montaña o Naturaleza para explorar venues curados.</p>
       </div>
     `;
@@ -354,26 +426,150 @@ function filtrarVenues(){
 }
 
 function crearPlan(){
+
+  const bride = document.getElementById("brideName").value || "Novia";
   const guests = document.getElementById("guests").value;
   const vibe = document.getElementById("vibe").value;
   const budget = document.getElementById("budget").value;
+  const priority = document.getElementById("priority").value;
+  const destination = document.getElementById("destination").value;
 
   let titulo = "Novia Panamá Moderna";
-  if(vibe === "luxury") titulo = "Novia Luxury Editorial";
-  if(vibe === "playa") titulo = "Novia Tropical Destination";
-  if(vibe === "romántica") titulo = "Novia Jardín Romántica";
+  let palette = "Ivory · champagne · soft gold";
+  let venues = "Santa María · Sofitel · Casa Veranda";
+  let vendors = "Pompa · PRP Events · Jenny Polonsky";
+  let budgetRange = "$25k-$60k";
+  let vibeText = "Classic luxury con detalles editoriales.";
+
+  if(vibe === "playa"){
+    titulo = "Novia Tropical Destination";
+    palette = "Sand · pearl · tropical green";
+    venues = "Buenaventura · Playa Bonita · Bocas";
+    vendors = "Trust Events · Regina Events";
+    budgetRange = "$18k-$55k";
+    vibeText = "Sunset wedding con experiencia relajada pero elegante.";
+  }
+
+  if(vibe === "romántica"){
+    titulo = "Novia Jardín Romántica";
+    palette = "Blush · ivory · candlelight";
+    venues = "Boquete · El Valle · garden venues";
+    vendors = "Très Chic · Lala Panama";
+    budgetRange = "$15k-$45k";
+    vibeText = "Garden romance con flores suaves y cena íntima.";
+  }
+
+  if(vibe === "oldmoney"){
+    titulo = "Old Money Bride";
+    palette = "Black · ivory · champagne";
+    venues = "Sofitel · Santa María · Hotel La Compañía";
+    vendors = "Pompa · The Planners Firm";
+    budgetRange = "$40k-$120k";
+    vibeText = "Formal, timeless y ultra elegante.";
+  }
+
+  if(vibe === "european"){
+    titulo = "European Summer Bride";
+    palette = "White · olive · soft blue";
+    venues = "Casco Viejo · Buenaventura";
+    vendors = "PRP Events · Regina Events";
+    budgetRange = "$25k-$70k";
+    vibeText = "Inspiración mediterránea y editorial.";
+  }
 
   document.getElementById("plan").classList.remove("hidden");
+
   document.getElementById("plan").innerHTML = `
-    <h3>${titulo}</h3>
-    <p>Tu boda se perfila como una celebración <strong>${vibe}</strong>, de tamaño <strong>${guests}</strong>, con presupuesto <strong>${budget}</strong>.</p>
-    <ul>
-      <li>Primero define invitados y presupuesto máximo.</li>
-      <li>Cotiza mínimo 3 venues antes de separar fecha.</li>
-      <li>Pregunta por comida, descorche, lluvia, música, parking y hora límite.</li>
-      <li>Reserva foto/video temprano si es temporada alta.</li>
-      <li>Guarda todo en una hoja comparativa antes de decidir.</li>
-    </ul>
+    <div class="center">
+
+      <span class="tag">Perfil detectado</span>
+
+      <h3 style="font-size:42px;margin-top:18px;">
+        ${titulo}
+      </h3>
+
+      <p style="max-width:850px;margin:auto;">
+        ${bride}, tu boda se perfila como una experiencia
+        <strong>${vibeText}</strong>
+      </p>
+
+      <div class="grid" style="margin-top:35px;">
+
+        <div class="card">
+          <h3>Venues ideales</h3>
+          <p>${venues}</p>
+        </div>
+
+        <div class="card">
+          <h3>Paleta sugerida</h3>
+          <p>${palette}</p>
+        </div>
+
+        <div class="card">
+          <h3>Presupuesto típico</h3>
+          <p>${budgetRange}</p>
+        </div>
+
+        <div class="card">
+          <h3>Prioridad principal</h3>
+          <p>${priority}</p>
+        </div>
+
+      </div>
+
+      <div class="card" style="margin-top:28px;text-align:left;">
+
+        <h3>Pinterest energy</h3>
+
+        <p>
+          ${vibeText}
+        </p>
+
+        <br>
+
+        <h3>🤍 Vendors compatibles</h3>
+
+        <p>${vendors}</p>
+
+        <br>
+
+        <h3>Costos que probablemente necesitarás</h3>
+
+        <ul>
+          <li>Valet parking</li>
+          <li>Plan de lluvia / tent</li>
+          <li>Horas extra DJ</li>
+          <li>Transporte invitados</li>
+          <li>Room blocks / hospedaje</li>
+          <li>Descorche y overtime</li>
+        </ul>
+
+      </div>
+
+      <div class="card" style="margin-top:28px;background:#15100d;border:1px solid rgba(243,213,167,.35);">
+
+        <h3>Desbloquea la versión premium</h3>
+
+        <div class="grid" style="margin-top:20px;">
+
+          <div>Comparador de vendors</div>
+          <div>Budget planner editable</div>
+          <div>Directorio privado completo</div>
+          <div>Hidden gems & venues</div>
+          <div>Wedding timeline</div>
+          <div>Plantilla PDF descargable</div>
+
+        </div>
+
+        <br>
+
+        <a href="premium.html" class="btn">
+          Entrar al dashboard premium
+        </a>
+
+      </div>
+
+    </div>
   `;
 }
 
