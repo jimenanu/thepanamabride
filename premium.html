@@ -3,90 +3,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Premium | The Panama Bride</title>
+  <title>Premium Dashboard | The Panama Bride</title>
+
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,sans-serif;background:#080705;color:#f7efe6;padding:50px 7%}
+    body{font-family:Arial,sans-serif;background:#070605;color:#f7efe6;padding:34px 6%}
     h1,h2,h3{font-family:Georgia,serif;color:#f3d5a7}
-    h1{font-size:54px;margin-bottom:14px}
-    p{font-size:18px;line-height:1.6;color:#eadfd5;margin-bottom:20px}
-    .card{background:linear-gradient(145deg,#15110e,#0d0a08);border:1px solid rgba(243,213,167,.22);border-radius:28px;padding:24px;margin:18px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .tag{display:inline-block;background:rgba(216,185,140,.13);border:1px solid rgba(216,185,140,.28);color:#f3d5a7;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
-    input,button{padding:14px;border-radius:999px;border:1px solid #d8b98c;margin:6px}
-    input{background:#110e0c;color:#fff;width:min(360px,100%)}
-    button,.btn{background:#d8b98c;color:#120f0c;text-decoration:none;font-weight:bold;cursor:pointer}
-    .hidden{display:none}
+    h1{font-size:clamp(44px,7vw,86px);margin:18px 0}
+    h2{font-size:34px;margin-bottom:12px}
+    h3{font-size:23px;margin-bottom:10px}
+    p{font-size:17px;line-height:1.6;color:#e8ddd2;margin-bottom:16px}
     a{color:#f3d5a7}
-    .top{margin-bottom:35px}
+    input,select,button{padding:14px;border-radius:999px;border:1px solid rgba(243,213,167,.35);background:#0f0c0a;color:#f7efe6;margin:6px}
+    button,.btn{background:#d8b98c;color:#120f0c;text-decoration:none;font-weight:700;cursor:pointer}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:36px}
+    .badge{border:1px solid rgba(243,213,167,.35);border-radius:999px;padding:9px 14px;color:#f3d5a7;font-size:13px}
+    .card{background:linear-gradient(145deg,#15110e,#0b0907);border:1px solid rgba(243,213,167,.22);border-radius:30px;padding:26px;margin:18px 0;box-shadow:0 22px 55px rgba(0,0,0,.42)}
+    .hidden{display:none}
+    .tabs{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+    .tab{background:transparent;color:#f7efe6}
+    .tab.active{background:#d8b98c;color:#120f0c}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:22px 0}
+    .kpi{border:1px solid rgba(243,213,167,.18);border-radius:24px;padding:20px;background:#0f0c0a}
+    .kpi strong{display:block;font-size:26px;color:#f3d5a7}
+    .tag{display:inline-block;background:rgba(216,185,140,.13);border:1px solid rgba(216,185,140,.28);color:#f3d5a7;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
+    .muted{font-size:13px;color:#b8aaa0}
+    .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    ul{margin-left:20px;line-height:1.8;color:#e8ddd2}
+    .footer{margin-top:40px;color:#b8aaa0;font-size:13px}
   </style>
 </head>
+
 <body>
 
   <div class="top">
     <a href="index.html">← Volver</a>
-    <h1>Premium Planner Directory</h1>
-    <p>Directorio premium de wedding planners en Panamá con contactos, redes y rangos estimados.</p>
+    <span class="badge">Premium · The Panama Bride</span>
   </div>
 
-  <div id="paywall" class="card">
-    <h2>Acceso Premium</h2>
-    <p>Ingresa tu código para ver el directorio completo.</p>
-    <input id="code" placeholder="Código de acceso">
-    <button onclick="unlock()">Entrar</button>
-    <p>¿No tienes código? <a href="https://gumroad.com/" target="_blank">Comprar acceso</a></p>
-  </div>
+  <section id="paywall">
+    <h1>Premium Planner Dashboard</h1>
+    <p>Tu tablero privado para comparar planners, proveedores, inspiración y presupuesto estimado para bodas en Panamá.</p>
 
-  <div id="content" class="hidden">
-    <div class="grid" id="plannerGrid"></div>
-  </div>
+    <div class="card">
+      <h2>Acceso Premium</h2>
+      <p>Ingresa tu código para desbloquear el dashboard.</p>
+      <input id="code" placeholder="Código de acceso">
+      <button onclick="unlock()">Entrar</button>
+      <p class="muted">Código demo actual: BRIDE2026</p>
+    </div>
+  </section>
+
+  <section id="dashboard" class="hidden">
+
+    <h1>Dashboard Premium</h1>
+    <p>Comparador curado para tomar mejores decisiones sin perderte entre chats, screenshots y cotizaciones.</p>
+
+    <div class="kpis">
+      <div class="kpi"><span>Planners</span><strong>18</strong><p class="muted">opciones curadas</p></div>
+      <div class="kpi"><span>Presupuesto</span><strong>$18k+</strong><p class="muted">referencia inicial</p></div>
+      <div class="kpi"><span>Categorías</span><strong>6</strong><p class="muted">para explorar</p></div>
+      <div class="kpi"><span>Uso</span><strong>Self-serve</strong><p class="muted">sin llamadas iniciales</p></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('planners', this)">Wedding Planners</button>
+      <button class="tab" onclick="showTab('photos', this)">Fotos</button>
+      <button class="tab" onclick="showTab('court', this)">Trajes Corte</button>
+      <button class="tab" onclick="showTab('moms', this)">Mamá de Novia</button>
+      <button class="tab" onclick="showTab('decor', this)">Decoradores</button>
+      <button class="tab" onclick="showTab('budget', this)">Presupuesto</button>
+    </div>
+
+    <div id="content"></div>
+
+  </section>
 
 <script>
 const ACCESS_CODE = "BRIDE2026";
 
 const planners = [
-  ["Jenny Polonsky Luxury Events","+507 6090-1121","jpluxuryevents.com","@jpluxuryevents","$8k-$40k+"],
-  ["Regina Events","Web / DM","reginaevent.com","@reginaeventspty","$5k-$25k"],
-  ["Stylo Panama","+507 6706-1430","stylopanama.com","@stylopanama","$4k-$20k"],
-  ["Paola Mantilla Events","+507 6675-4685","—","@paolamantillaevents","$6k-$35k"],
-  ["Très Chic Planners","Instagram DM","—","@treschicplanners","$8k-$45k+"],
-  ["PRP Events - Event Stylist","+507 6690-7472","prpevents.com","@prpevents","$7k-$50k"],
-  ["Memories Panama Events","Instagram DM","—","@memoriespanamaevents","$5k-$25k"],
-  ["Didi Events Agency","+507 6614-1277","—","@didieventsagency","$4k-$18k"],
-  ["VL Wedding & Events Planner","+507 6326-0585","—","@vlweddingspanama","$3k-$15k"],
-  ["MY DAY - Organización de eventos","+507 6781-0575","—","@mydaypanama","$3k-$15k"],
-  ["Nova Weddings Panamá","+507 6312-3357","—","@novaweddingspanama","$4k-$18k"],
-  ["Creaciones y Eventos AG","+507 6605-1486","—","@creacionesyeventosag","$3k-$20k"],
-  ["Aquamarina Events S.A.","+507 392-8496","—","@aquamarinaeventos","$5k-$25k"],
-  ["Bodas Helper","+507 6801-3674","—","@bodashelper","$2k-$10k"],
-  ["Melissa Pineda","+507 6949-3049","—","@melissapinedabodas","$4k-$20k"],
-  ["Pompa by Carlos Mastellari","Web / DM","https://www.pompaevents.com","@pompaevents","$10k-$60k+"],
-  ["The Planners Firm","Web / DM","https://www.theplannersfirm.com","@theplannersfirm","$6k-$35k"],
-  ["Trust Events Co.","DM Instagram","—","@trusteventsco","$4k-$20k"]
+  ["Jenny Polonsky Luxury Events","+507 6090-1121","jpluxuryevents.com","@jpluxuryevents","$8k-$40k+","Luxury / high-end"],
+  ["Regina Events","Web / DM","reginaevent.com","@reginaeventspty","$5k-$25k","Classic / elegant"],
+  ["Stylo Panama","+507 6706-1430","stylopanama.com","@stylopanama","$4k-$20k","Modern / stylish"],
+  ["Paola Mantilla Events","+507 6675-4685","—","@paolamantillaevents","$6k-$35k","Romantic / premium"],
+  ["Très Chic Planners","Instagram DM","—","@treschicplanners","$8k-$45k+","Luxury / editorial"],
+  ["PRP Events","+507 6690-7472","prpevents.com","@prpevents","$7k-$50k","Styling / production"],
+  ["Memories Panama Events","Instagram DM","—","@memoriespanamaevents","$5k-$25k","Classic / family"],
+  ["Didi Events Agency","+507 6614-1277","—","@didieventsagency","$4k-$18k","Accessible / full planning"],
+  ["VL Wedding & Events Planner","+507 6326-0585","—","@vlweddingspanama","$3k-$15k","Budget friendly"],
+  ["MY DAY","+507 6781-0575","—","@mydaypanama","$3k-$15k","Coordination"],
+  ["Nova Weddings Panamá","+507 6312-3357","—","@novaweddingspanama","$4k-$18k","Modern"],
+  ["Creaciones y Eventos AG","+507 6605-1486","—","@creacionesyeventosag","$3k-$20k","Events / production"],
+  ["Aquamarina Events S.A.","+507 392-8496","—","@aquamarinaeventos","$5k-$25k","Events"],
+  ["Bodas Helper","+507 6801-3674","—","@bodashelper","$2k-$10k","Entry level"],
+  ["Melissa Pineda","+507 6949-3049","—","@melissapinedabodas","$4k-$20k","Bridal"],
+  ["Pompa by Carlos Mastellari","Web / DM","pompaevents.com","@pompaevents","$10k-$60k+","Ultra luxury"],
+  ["The Planners Firm","Web / DM","theplannersfirm.com","@theplannersfirm","$6k-$35k","Premium"],
+  ["Trust Events Co.","DM Instagram","—","@trusteventsco","$4k-$20k","Modern"]
 ];
 
+const data = {
+  photos: [
+    ["Casco Viejo","Editorial, colonial, rooftops, calles históricas","Perfecto para civil o pre-wedding"],
+    ["Biomuseo / Amador","Color, skyline, mar","Muy Panamá y moderno"],
+    ["Panamá Viejo","Ruinas, historia, textura","Romántico y dramático"],
+    ["Cerro Azul / Gamboa","Naturaleza, verde, tropical","Para vibes orgánicas"],
+    ["Playa Bonita","Sunset, playa, resort","Ideal para destination bride"]
+  ],
+  court: [
+    ["Damas en champagne","Elegant, timeless, combina con todo","Ideal para bodas luxury"],
+    ["Damas en sage green","Tropical soft, fresco, moderno","Perfecto para jardín/playa"],
+    ["Damas en terracotta","Warm, editorial, sunset","Muy Pinterest"],
+    ["Caballeros en linen","Beige, ivory, tropical formal","Ideal para playa"],
+    ["Black tie clásico","Negro, tux, formal","Ideal hotel ballroom"]
+  ],
+  moms: [
+    ["Mamá de novia en champagne","Clásico, elegante, muy foto-friendly","Evitar blanco puro"],
+    ["Mamá de novia en navy","Sofisticado y formal","Funciona en noche"],
+    ["Mamá de novia en emerald","Luxury tropical","Muy bien para jardín"],
+    ["Mamá de novia en rose gold","Suave, femenino, elegante","Ideal recepción"],
+    ["Mamá de novia en silver","Formal, timeless","Muy gala"]
+  ],
+  decor: [
+    ["Candlelight dinner","Velas, mesas largas, flores blancas","Luxury editorial"],
+    ["Tropical minimal","Verde, blanco, madera clara","Panamá moderno"],
+    ["Garden romance","Flores suaves, luces cálidas, texturas","Romántico"],
+    ["Beach chic","Lino, conchas sutiles, palmas","Destination wedding"],
+    ["Black tie glam","Negro, dorado, cristalería, velas","Hotel ballroom"]
+  ]
+};
+
 function unlock(){
-  if(document.getElementById("code").value === ACCESS_CODE){
+  const code = document.getElementById("code").value.trim();
+  if(code === ACCESS_CODE){
     document.getElementById("paywall").classList.add("hidden");
-    document.getElementById("content").classList.remove("hidden");
-    render();
+    document.getElementById("dashboard").classList.remove("hidden");
+    renderPlanners();
   } else {
     alert("Código incorrecto");
   }
 }
 
-function render(){
-  document.getElementById("plannerGrid").innerHTML = planners.map(p => `
+function setActive(btn){
+  document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+function showTab(tab, btn){
+  setActive(btn);
+  if(tab === "planners") renderPlanners();
+  if(tab === "photos") renderCards("Lugares para fotos", data.photos);
+  if(tab === "court") renderCards("Trajes para la corte", data.court);
+  if(tab === "moms") renderCards("Trajes para mamá de novia", data.moms);
+  if(tab === "decor") renderCards("Decoradores & estilos", data.decor);
+  if(tab === "budget") renderBudget();
+}
+
+function renderPlanners(){
+  document.getElementById("content").innerHTML = `
     <div class="card">
-      <h3>${p[0]}</h3>
-      <p><strong>Contacto:</strong> ${p[1]}</p>
-      <p><strong>Web:</strong> ${p[2]}</p>
-      <p><strong>Instagram:</strong> ${p[3]}</p>
-      <span class="tag">${p[4]}</span>
+      <h2>Wedding Planners</h2>
+      <p>Directorio premium con contacto, estilo y rango estimado. Confirmar disponibilidad y paquetes directamente.</p>
     </div>
-  `).join("");
+    <div class="grid">
+      ${planners.map(p => `
+        <div class="card">
+          <h3>${p[0]}</h3>
+          <p><strong>Contacto:</strong> ${p[1]}</p>
+          <p><strong>Web:</strong> ${p[2]}</p>
+          <p><strong>Instagram:</strong> ${p[3]}</p>
+          <span class="tag">${p[4]}</span>
+          <span class="tag">${p[5]}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderCards(title, items){
+  document.getElementById("content").innerHTML = `
+    <div class="card">
+      <h2>${title}</h2>
+      <p>Ideas curadas para inspiración y comparación inicial.</p>
+    </div>
+    <div class="grid">
+      ${items.map(i => `
+        <div class="card">
+          <h3>${i[0]}</h3>
+          <p>${i[1]}</p>
+          <span class="tag">${i[2]}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderBudget(){
+  document.getElementById("content").innerHTML = `
+    <div class="card">
+      <h2>Dashboard de presupuesto estimado</h2>
+      <p>Calcula una referencia inicial. Esto no reemplaza cotizaciones reales.</p>
+
+      <div class="row">
+        <div>
+          <label>Invitados</label>
+          <input id="guests" type="number" value="120">
+        </div>
+        <div>
+          <label>Costo por invitado estimado</label>
+          <input id="perGuest" type="number" value="150">
+        </div>
+        <div>
+          <label>Decoración</label>
+          <input id="decorCost" type="number" value="8000">
+        </div>
+        <div>
+          <label>Foto / video</label>
+          <input id="photoCost" type="number" value="4500">
+        </div>
+        <div>
+          <label>Planner</label>
+          <input id="plannerCost" type="number" value="8000">
+        </div>
+        <div>
+          <label>Extra / contingencia</label>
+          <input id="extraCost" type="number" value="5000">
+        </div>
+      </div>
+
+      <button onclick="calcBudget()">Calcular</button>
+      <div id="budgetResult" class="card"></div>
+    </div>
+  `;
+  calcBudget();
+}
+
+function calcBudget(){
+  const guests = +document.getElementById("guests").value || 0;
+  const perGuest = +document.getElementById("perGuest").value || 0;
+  const decor = +document.getElementById("decorCost").value || 0;
+  const photo = +document.getElementById("photoCost").value || 0;
+  const planner = +document.getElementById("plannerCost").value || 0;
+  const extra = +document.getElementById("extraCost").value || 0;
+
+  const food = guests * perGuest;
+  const total = food + decor + photo + planner + extra;
+
+  document.getElementById("budgetResult").innerHTML = `
+    <h3>Total estimado: $${total.toLocaleString()}</h3>
+    <p>Comida/bebida estimada: $${food.toLocaleString()}</p>
+    <p>Decoración: $${decor.toLocaleString()} · Foto/video: $${photo.toLocaleString()} · Planner: $${planner.toLocaleString()} · Extra: $${extra.toLocaleString()}</p>
+    <span class="tag">Referencia inicial</span>
+    <span class="tag">No incluye vestido/anillos/luna de miel</span>
+  `;
 }
 </script>
+
+<div class="footer">
+  The Panama Bride · Premium dashboard. Información referencial; confirmar directamente con proveedores.
+</div>
 
 </body>
 </html>
