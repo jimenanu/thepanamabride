@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium | The Panama Bride</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#080705;color:#f7efe6;padding:50px 7%}
+    h1,h2,h3{font-family:Georgia,serif;color:#f3d5a7}
+    h1{font-size:54px;margin-bottom:14px}
+    p{font-size:18px;line-height:1.6;color:#eadfd5;margin-bottom:20px}
+    .card{background:linear-gradient(145deg,#15110e,#0d0a08);border:1px solid rgba(243,213,167,.22);border-radius:28px;padding:24px;margin:18px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .tag{display:inline-block;background:rgba(216,185,140,.13);border:1px solid rgba(216,185,140,.28);color:#f3d5a7;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
+    input,button{padding:14px;border-radius:999px;border:1px solid #d8b98c;margin:6px}
+    input{background:#110e0c;color:#fff;width:min(360px,100%)}
+    button,.btn{background:#d8b98c;color:#120f0c;text-decoration:none;font-weight:bold;cursor:pointer}
+    .hidden{display:none}
+    a{color:#f3d5a7}
+    .top{margin-bottom:35px}
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <a href="index.html">← Volver</a>
+    <h1>Premium Planner Directory</h1>
+    <p>Directorio premium de wedding planners en Panamá con contactos, redes y rangos estimados.</p>
+  </div>
+
+  <div id="paywall" class="card">
+    <h2>Acceso Premium</h2>
+    <p>Ingresa tu código para ver el directorio completo.</p>
+    <input id="code" placeholder="Código de acceso">
+    <button onclick="unlock()">Entrar</button>
+    <p>¿No tienes código? <a href="https://gumroad.com/" target="_blank">Comprar acceso</a></p>
+  </div>
+
+  <div id="content" class="hidden">
+    <div class="grid" id="plannerGrid"></div>
+  </div>
+
+<script>
+const ACCESS_CODE = "BRIDE2026";
+
+const planners = [
+  ["Jenny Polonsky Luxury Events","+507 6090-1121","jpluxuryevents.com","@jpluxuryevents","$8k-$40k+"],
+  ["Regina Events","Web / DM","reginaevent.com","@reginaeventspty","$5k-$25k"],
+  ["Stylo Panama","+507 6706-1430","stylopanama.com","@stylopanama","$4k-$20k"],
+  ["Paola Mantilla Events","+507 6675-4685","—","@paolamantillaevents","$6k-$35k"],
+  ["Très Chic Planners","Instagram DM","—","@treschicplanners","$8k-$45k+"],
+  ["PRP Events - Event Stylist","+507 6690-7472","prpevents.com","@prpevents","$7k-$50k"],
+  ["Memories Panama Events","Instagram DM","—","@memoriespanamaevents","$5k-$25k"],
+  ["Didi Events Agency","+507 6614-1277","—","@didieventsagency","$4k-$18k"],
+  ["VL Wedding & Events Planner","+507 6326-0585","—","@vlweddingspanama","$3k-$15k"],
+  ["MY DAY - Organización de eventos","+507 6781-0575","—","@mydaypanama","$3k-$15k"],
+  ["Nova Weddings Panamá","+507 6312-3357","—","@novaweddingspanama","$4k-$18k"],
+  ["Creaciones y Eventos AG","+507 6605-1486","—","@creacionesyeventosag","$3k-$20k"],
+  ["Aquamarina Events S.A.","+507 392-8496","—","@aquamarinaeventos","$5k-$25k"],
+  ["Bodas Helper","+507 6801-3674","—","@bodashelper","$2k-$10k"],
+  ["Melissa Pineda","+507 6949-3049","—","@melissapinedabodas","$4k-$20k"],
+  ["Pompa by Carlos Mastellari","Web / DM","https://www.pompaevents.com","@pompaevents","$10k-$60k+"],
+  ["The Planners Firm","Web / DM","https://www.theplannersfirm.com","@theplannersfirm","$6k-$35k"],
+  ["Trust Events Co.","DM Instagram","—","@trusteventsco","$4k-$20k"]
+];
+
+function unlock(){
+  if(document.getElementById("code").value === ACCESS_CODE){
+    document.getElementById("paywall").classList.add("hidden");
+    document.getElementById("content").classList.remove("hidden");
+    render();
+  } else {
+    alert("Código incorrecto");
+  }
+}
+
+function render(){
+  document.getElementById("plannerGrid").innerHTML = planners.map(p => `
+    <div class="card">
+      <h3>${p[0]}</h3>
+      <p><strong>Contacto:</strong> ${p[1]}</p>
+      <p><strong>Web:</strong> ${p[2]}</p>
+      <p><strong>Instagram:</strong> ${p[3]}</p>
+      <span class="tag">${p[4]}</span>
+    </div>
+  `).join("");
+}
+</script>
+
+</body>
+</html>
