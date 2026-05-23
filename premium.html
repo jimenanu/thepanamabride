@@ -105,13 +105,28 @@ const planners = [
 ];
 
 const data = {
-  photos: [
-    ["Casco Viejo","Editorial, colonial, rooftops, calles históricas","Perfecto para civil o pre-wedding"],
-    ["Biomuseo / Amador","Color, skyline, mar","Muy Panamá y moderno"],
-    ["Panamá Viejo","Ruinas, historia, textura","Romántico y dramático"],
-    ["Cerro Azul / Gamboa","Naturaleza, verde, tropical","Para vibes orgánicas"],
-    ["Playa Bonita","Sunset, playa, resort","Ideal para destination bride"]
-  ],
+photos: [
+  ["Casco Viejo","Ciudad · Casco","10 min","Unlimited","Gratis-$300 permisos","Colonial, editorial, lujo histórico","https://maps.google.com/?q=Casco+Viejo+Panama"],
+  ["Hotel La Compañía","Ciudad · Casco","10 min","50-300","$500-$5k","Luxury colonial vibes","https://maps.google.com/?q=Hotel+La+Compania+Panama"],
+  ["Sofitel Legend Casco Viejo","Ciudad · Casco","10 min","50-300","$500-$8k","European luxury aesthetic","https://maps.google.com/?q=Sofitel+Legend+Casco+Viejo"],
+  ["American Trade Hotel","Ciudad · Casco","10 min","50-250","$500-$5k","Vintage Panama elegance","https://maps.google.com/?q=American+Trade+Hotel"],
+  ["Biomuseo","Ciudad · Amador","15 min","Unlimited","$300-$5k","Colorful modern architecture","https://maps.google.com/?q=Biomuseo+Panama"],
+  ["Panamá Viejo","Ciudad · Panamá Viejo","15 min","Unlimited","$100-$1k permisos","Historic ruins aesthetic","https://maps.google.com/?q=Panama+Viejo"],
+  ["Cinta Costera","Ciudad · Panamá City","5 min","Unlimited","Gratis","Skyline + ocean","https://maps.google.com/?q=Cinta+Costera+Panama"],
+  ["Parque Omar","Ciudad · Panamá City","10 min","Unlimited","Gratis","Soft greenery","https://maps.google.com/?q=Parque+Omar+Panama"],
+  ["Cerro Ancón","Ciudad/Naturaleza","15 min","Unlimited","Gratis","Nature + skyline","https://maps.google.com/?q=Cerro+Ancon"],
+  ["Santa Maria Golf & Country Club","Ciudad · Costa del Este","20 min","100-400","$1k-$10k","Luxury golf resort","https://maps.google.com/?q=Santa+Maria+Panama"],
+  ["JW Marriott Panama","Ciudad · Punta Pacífica","10 min","100-400","$500-$6k","Modern luxury","https://maps.google.com/?q=JW+Marriott+Panama"],
+  ["Waldorf Astoria Panama","Ciudad · Marbella","5 min","80-300","$500-$5k","Classic luxury","https://maps.google.com/?q=Waldorf+Astoria+Panama"],
+  ["Gamboa Rainforest Reserve","Naturaleza · Gamboa","45 min","50-300","$500-$8k","Jungle luxury","https://maps.google.com/?q=Gamboa+Rainforest+Reserve"],
+  ["Cerro Azul","Montaña","45 min","Unlimited","Gratis-$500","Mountain romantic","https://maps.google.com/?q=Cerro+Azul+Panama"],
+  ["Playa Bonita","Playa · Veracruz","25 min","Unlimited","Gratis-$500","Beach sunset","https://maps.google.com/?q=Playa+Bonita+Panama"],
+  ["Buenaventura","Playa · Río Hato","1h 45m","100-500","$1k-$15k","Luxury resort destination","https://maps.google.com/?q=Buenaventura+Panama"],
+  ["El Valle de Antón","Montaña · Coclé","2h 30m","Unlimited","Gratis-$500","Garden mountain vibes","https://maps.google.com/?q=El+Valle+de+Anton"],
+  ["Boquete","Montaña · Chiriquí","Vuelo + carro","Unlimited","Gratis-$500","Cloud forest aesthetic","https://maps.google.com/?q=Boquete+Panama"],
+  ["Bocas del Toro","Playa · Bocas","Vuelo","Unlimited","Gratis-$500","Caribbean tropical","https://maps.google.com/?q=Bocas+del+Toro"],
+  ["Playa Venao","Playa · Pedasí","5h","Unlimited","Gratis-$500","Boho surf luxury","https://maps.google.com/?q=Playa+Venao"]
+],
   court: [
     ["Damas en champagne","Elegant, timeless, combina con todo","Ideal para bodas luxury"],
     ["Damas en sage green","Tropical soft, fresco, moderno","Perfecto para jardín/playa"],
@@ -183,11 +198,49 @@ function renderPlanners(){
 }
 
 function renderCards(title, items){
+
+  const isPhotos = title.includes("Fotos");
+
+  if(isPhotos){
+
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>${title}</h2>
+        <p>Directorio premium de lugares para fotos, civil weddings, bridal shoots y contenido editorial en Panamá.</p>
+      </div>
+
+      <div class="grid">
+        ${items.map(i => `
+          <div class="card">
+            <h3>${i[0]}</h3>
+
+            <p><strong>Zona:</strong> ${i[1]}</p>
+            <p><strong>Distancia:</strong> ${i[2]}</p>
+            <p><strong>Capacidad:</strong> ${i[3]}</p>
+
+            <span class="tag">${i[4]}</span>
+            <span class="tag">${i[5]}</span>
+
+            <br><br>
+
+            <a class="btn" href="${i[6]}" target="_blank">
+              Ver en Google Maps
+            </a>
+
+          </div>
+        `).join("")}
+      </div>
+    `;
+
+    return;
+  }
+
   document.getElementById("content").innerHTML = `
     <div class="card">
       <h2>${title}</h2>
       <p>Ideas curadas para inspiración y comparación inicial.</p>
     </div>
+
     <div class="grid">
       ${items.map(i => `
         <div class="card">
