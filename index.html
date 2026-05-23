@@ -101,86 +101,97 @@ body{
 <section id="planner">
 
   <div class="center">
-  <h2>Descubre el perfil de tu boda</h2>
+    <h2>Descubre el perfil de tu boda</h2>
+    <p style="max-width:850px;margin:auto;">
+      Responde unas preguntas rápidas y recibe una primera guía personalizada según tu estilo,
+      invitados, presupuesto y visión de boda en Panamá.
+    </p>
+  </div>
 
-  <p style="max-width:850px;margin:auto;">
-    Creamos una guía basada en tu estilo,
-    presupuesto, invitados y visión de boda en Panamá.
-  </p>
-</div>
+  <div class="card center" style="margin-top:40px;text-align:left;max-width:1100px;">
 
-<div class="card center" style="margin-top:40px;text-align:left;max-width:1100px;">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
 
-  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div>
+        <label>¿Dónde viven actualmente?</label>
+        <select id="location">
+          <option>Panamá</option>
+          <option>Estados Unidos</option>
+          <option>Canadá</option>
+          <option>Europa</option>
+          <option>Latinoamérica</option>
+          <option>Otro</option>
+        </select>
 
-    <div>
-      <label>¿Dónde viven actualmente?</label>
-      <select id="location">
-        <option>Panamá</option>
-        <option>Estados Unidos</option>
-        <option>Canadá</option>
-        <option>Europa</option>
-        <option>Latinoamérica</option>
-        <option>Otro</option>
-      </select>
+        <label>¿Será destination wedding?</label>
+        <select id="destination">
+          <option>Sí</option>
+          <option>No</option>
+          <option>Tal vez</option>
+        </select>
 
-      <label>¿Será destination wedding?</label>
-      <select id="destination">
-        <option>Sí</option>
-        <option>No</option>
-        <option>Tal vez</option>
-      </select>
+        <label>Prioridad principal</label>
+        <select id="priority">
+          <option>Venue</option>
+          <option>Decoración</option>
+          <option>Foto / video</option>
+          <option>Experiencia invitados</option>
+          <option>Moda / vestidos</option>
+          <option>Comida & bebidas</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Invitados estimados</label>
+        <select id="guests">
+          <option value="íntima">Menos de 50</option>
+          <option value="media">50–120</option>
+          <option value="grande">120–300</option>
+          <option value="mega">300+</option>
+        </select>
+
+        <label>Estilo principal</label>
+        <select id="vibe">
+          <option value="luxury">Luxury editorial</option>
+          <option value="playa">Tropical / playa</option>
+          <option value="romántica">Romántica / jardín</option>
+          <option value="moderna">Moderna / ciudad</option>
+          <option value="oldmoney">Old money</option>
+          <option value="european">European summer</option>
+        </select>
+
+        <label>Presupuesto</label>
+        <select id="budget">
+          <option value="simple">Simple pero lindo</option>
+          <option value="medio">Intermedio</option>
+          <option value="premium">Bride+</option>
+          <option value="luxury">Luxury alto</option>
+        </select>
+      </div>
+
     </div>
 
-    <div>
-      <label>Invitados estimados</label>
-      <select id="guests">
-        <option value="íntima">Menos de 50</option>
-        <option value="media">50–120</option>
-        <option value="grande">120-300</option>
-        <option value="grande">300+</option>
-      </select>
+    <div style="margin-top:30px;text-align:center;">
+      <div style="margin-bottom:18px;">
+        <span class="tag">Personalized wedding profile</span>
+        <span class="tag">Panamá insights</span>
+        <span class="tag">Budget guidance</span>
+        <span class="tag">Pinterest vibes</span>
+      </div>
 
-      <label>Estilo principal</label>
-      <select id="vibe">
-        <option value="luxury">Luxury editorial</option>
-        <option value="playa">Tropical / playa</option>
-        <option value="romántica">Romántica / jardín</option>
-        <option value="moderna">Moderna / ciudad</option>
-        <option value="oldmoney">Old money</option>
-        <option value="european">European summer</option>
-      </select>
+      <button onclick="crearPlan()" style="font-size:16px;padding:16px 34px;">
+        Ver mi roadmap
+      </button>
 
-      <label>Presupuesto</label>
-      <select id="budget">
-        <option value="simple">Simple pero lindo</option>
-        <option value="medio">Intermedio</option>
-        <option value="premium">Bride+</option>
-        <option value="luxury">Luxury alto</option>
-      </select>
+      <a href="https://forms.gle/HPW89n1t3o8uySfy9" target="_blank" class="btn alt" style="font-size:16px;padding:16px 34px;">
+        Obtener código promocional
+      </a>
     </div>
+
+    <div id="plan" class="card hidden" style="margin-top:35px;"></div>
 
   </div>
 
-  <div style="margin-top:30px;text-align:center;">
-
-    <div style="margin-bottom:18px;">
-      <span class="tag">Personalized wedding profile</span>
-      <span class="tag">Panamá insights</span>
-      <span class="tag">Budget guidance</span>
-      <span class="tag">Pinterest vibes</span>
-    </div>
-
-    <button onclick="crearPlan()" style="font-size:16px;padding:16px 34px;">
-      Ver mi roadmap
-    </button>
-
-  </div>
-
-  <div id="plan" class="card hidden" style="margin-top:35px;"></div>
-
-</div>
-  
 </section>
 
 <section id="venues">
