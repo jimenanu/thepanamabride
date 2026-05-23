@@ -262,7 +262,7 @@ const enrichedVenues = venues.map(enrichVenue);
 let map = L.map('map').setView([8.8, -79.8], 7);
 let markers = [];
 
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
