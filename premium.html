@@ -643,7 +643,8 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" id="tab-planners" onclick="showTab('planners')">Wedding Planners</button>
+    <button class="tab active" id="tab-downloads" onclick="showTab('downloads')">📚 Descargas</button>
+    <button class="tab" id="tab-planners" onclick="showTab('planners')">Wedding Planners</button>
     <button class="tab" id="tab-photos" onclick="showTab('photos')">Fotos</button>
     <button class="tab" id="tab-court" onclick="showTab('court')">Trajes Corte</button>
     <button class="tab" id="tab-moms" onclick="showTab('moms')">Mamá de Novia</button>
@@ -821,7 +822,7 @@ function unlock(){
   if(code === ACCESS_CODE){
     document.getElementById("paywall").classList.add("hidden");
     document.getElementById("dashboard").classList.remove("hidden");
-    showTab("planners");
+    showTab("downloads");
   } else {
     alert("Código incorrecto. Si eres Founding Member, revisa el email de bienvenida.");
   }
@@ -844,12 +845,99 @@ function setActive(tab){
 
 function showTab(tab){
   setActive(tab);
+  if(tab === "downloads") renderDownloads();
   if(tab === "planners") renderPlanners();
   if(tab === "photos") renderCards("Fotos", data.photos);
   if(tab === "court") renderCards("Trajes para la corte", data.court);
   if(tab === "moms") renderCards("Mamá de novia", data.moms);
   if(tab === "decor") renderCards("Decoradores", data.decor);
   if(tab === "budget") renderBudget();
+}
+
+function renderDownloads(){
+  const docs = [
+    {
+      num: "01",
+      title: "Timeline 12 Meses",
+      desc: "Guía editorial mes a mes con checklists curados y tips de planner. Tu roadmap completo de planificación.",
+      pages: "16 páginas",
+      tag: "Guía esencial",
+      file: "docs/1-PanamaBride-Timeline12Meses.pdf"
+    },
+    {
+      num: "02",
+      title: "WhatsApp Scripts",
+      desc: "24 plantillas para cotizar, negociar y cerrar con vendors. Cambias los [corchetes] y mandas.",
+      pages: "5 capítulos",
+      tag: "Acción inmediata",
+      file: "docs/2-PanamaBride-WhatsAppScripts.pdf"
+    },
+    {
+      num: "03",
+      title: "Vendor Black Book",
+      desc: "Directorio curado con tiers Signature, Curated, Smart y Rising. Precios reales y notas honestas.",
+      pages: "8 categorías",
+      tag: "Insider info",
+      file: "docs/3-PanamaBride-VendorBlackBook.pdf"
+    },
+    {
+      num: "04",
+      title: "Budget Bible",
+      desc: "3 tiers de presupuesto en Panamá ($15k–$150k+) con breakdown completo y los 9 costos ocultos.",
+      pages: "Tier completo",
+      tag: "Plata real",
+      file: "docs/4-PanamaBride-BudgetBible.pdf"
+    },
+    {
+      num: "05",
+      title: "Bridesmaids Playbook",
+      desc: "Guía honesta para tus damas: roles, costos reales, bridal shower, bachelorette, scripts incómodos.",
+      pages: "Para regalar",
+      tag: "Comparte con tus damas",
+      file: "docs/5-PanamaBride-BridesmaidsPlaybook.pdf"
+    }
+  ];
+
+  document.getElementById("content").innerHTML = `
+    <div class="card" style="background: linear-gradient(145deg, var(--bg-elevated), var(--bg-card)); border-color: var(--gold);">
+      <h2>📚 Tus descargas Founding</h2>
+      <p>Acceso de por vida a todos los PDFs editoriales del kit Bride+. Descarga, imprime, comparte con tu equipo. Updates futuros llegan aquí automáticamente.</p>
+      <div style="margin-top:14px;">
+        <span class="tag">5 PDFs editoriales</span>
+        <span class="tag">Updates incluidos</span>
+        <span class="tag">De por vida</span>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      ${docs.map(d => `
+        <div class="card" style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: start; gap: 14px; margin-bottom: 14px;">
+            <div style="font-family: var(--serif); font-style: italic; font-size: 32px; color: var(--gold); line-height: 1; flex-shrink: 0;">${d.num}</div>
+            <div style="flex: 1;">
+              <h3 style="margin-bottom: 6px;">${d.title}</h3>
+              <span class="tag" style="margin: 0; font-size: 10.5px;">${d.tag}</span>
+            </div>
+          </div>
+          <p style="flex: 1; font-size: 13.5px;">${d.desc}</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft);">
+            <span class="muted" style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;">${d.pages}</span>
+            <a href="${d.file}" download class="btn" style="margin: 0;">Descargar →</a>
+          </div>
+        </div>`).join("")}
+    </div>
+
+    <div class="card" style="margin-top: 30px; background: var(--bg-deepest); border-color: var(--border-mid);">
+      <h3 style="font-size: 18px;">📍 También para ti</h3>
+      <p style="font-size: 13.5px;">Explora los demás recursos del dashboard usando los tabs de arriba: directorios curados de planners, fotógrafos, decoradores, y la calculadora interactiva de presupuesto.</p>
+    </div>
+
+    <div class="card" style="margin-top: 16px; background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card)); border-color: var(--gold);">
+      <h3 style="font-size: 18px;">💬 Comunidad Founding</h3>
+      <p style="font-size: 13.5px;">¿Aún no estás en el grupo privado de WhatsApp? Escríbenos con tu número y te agregamos.</p>
+      <a href="https://wa.me/50765505354?text=Hola%20%F0%9F%A4%8D%20soy%20Founding%20Member%20y%20quiero%20unirme%20al%20grupo%20privado%20de%20WhatsApp" target="_blank" class="btn" style="margin-top: 8px;">Pedir acceso al grupo →</a>
+    </div>
+  `;
 }
 
 function renderPlanners(){
