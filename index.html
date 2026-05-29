@@ -1,1085 +1,1495 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Panama Bride Guide</title>
-  <meta name="description" content="Guía luxury para planificar bodas en Panamá: venues, bridal showers, vestidos, checklist, presupuesto y planner personalizado." />
-  <meta name="keywords" content="bodas en panama, wedding planner panama, venues panama, bodas playa panama, wedding venues panama, bridal shower panama, novia panama">
-  <meta property="og:title" content="The Panama Bride">
-  <meta property="og:description" content="La guía moderna para planificar bodas en Panamá.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<title>The Panama Bride · Tu playbook para casarte en Panamá</title>
+<meta name="description" content="Templates Canva, scripts WhatsApp para vendors, timeline de 12 meses, budget bible, directorio curado, mapa de venues. El playbook secreto para casarte en Panamá sin perder 200 horas en research.">
+<meta name="keywords" content="bodas en panama, templates boda canva, scripts whatsapp vendors, wedding timeline panama, presupuesto boda panama, venues panama, novia panama">
+<meta property="og:title" content="The Panama Bride · El playbook secreto para casarte en Panamá">
+<meta property="og:description" content="Templates listos. Scripts para negociar. Timeline curado. Presupuesto real. Todo lo que tu mejor amiga te daría — si ya se hubiera casado en Panamá."><meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629244702268994" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --bg-black: #000000;
+    --bg-deepest: #050302;
+    --bg-dark: #0d0805;
+    --bg-card: #1a120a;
+    --bg-elevated: #241810;
+    --border-soft: rgba(212,184,143,0.1);
+    --border-mid: rgba(212,184,143,0.22);
+    --border-strong: rgba(212,184,143,0.4);
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    --cream: #f7ecd9;
+    --cream-bright: #faf2e3;
+    --text-primary: #f7ecd9;
+    --text-secondary: #d4b88f;
+    --text-tertiary: #a08667;
+    --text-muted: #6b5641;
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial,sans-serif;background:#080705;color:#f7efe6}
-    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(8,7,5,.88);backdrop-filter:blur(18px);padding:16px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(216,185,140,.24)}
-    nav a{color:#f7efe6;text-decoration:none;margin-left:18px;font-size:14px;letter-spacing:.5px}
-    .brand{font-family:Georgia,serif;font-size:27px;color:#f3d5a7}
-    .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.78)),url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 20px 70px}
-    h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,94px);font-weight:400;margin-bottom:18px;color:#fff3df}
-    h2{font-family:Georgia,serif;font-size:42px;margin-bottom:16px;font-weight:400;color:#f3d5a7}
-    h3{font-family:Georgia,serif;font-size:25px;margin-bottom:12px;color:#f3d5a7}
-    p{font-size:18px;line-height:1.6;margin-bottom:20px;color:#eadfd5}
-    section{padding:90px 7%}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
-    .center{text-align:center;max-width:900px;margin:auto}
-    .btn,button{border:1px solid rgba(243,213,167,.55);background:#d8b98c;color:#120f0c;padding:13px 23px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;display:inline-block;margin:6px;font-size:14px}
-    .btn.alt{background:transparent;color:#f7efe6}
-    .btn.small-btn{padding:10px 16px;font-size:13px}
-   .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,320px));
-  justify-content:center;
-  gap:22px;
-  margin-top:30px;
-}
+    --gold: #c4a578;
+    --gold-bright: #d4b88f;
+    --gold-soft: #b8956e;
+    --champagne: #e8d4ad;
 
-    .card{background:linear-gradient(145deg,#15110e,#0d0a08);border:1px solid rgba(243,213,167,.22);border-radius:28px;padding:24px;box-shadow:0 18px 45px rgba(0,0,0,.38)}
-    .tag{display:inline-block;background:rgba(216,185,140,.13);border:1px solid rgba(216,185,140,.28);color:#f3d5a7;padding:7px 12px;border-radius:999px;font-size:13px;margin:4px}
-    select,input{width:100%;padding:14px;border-radius:15px;border:1px solid rgba(216,185,140,.36);margin:8px 0 16px;background:#110e0c;color:#f7efe6}
-    label{display:block;text-align:left;color:#f3d5a7;margin-top:10px}
-    .hidden{display:none}
-    ul{margin-left:20px;line-height:1.8;color:#eadfd5}
-    .venue-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
-    #map{height:640px;border-radius:30px;border:1px solid rgba(216,185,140,.28);overflow:hidden}
-    .venue-list{max-height:640px;overflow:auto;padding-right:8px}
-    .venue-card{margin-bottom:16px}
-    .venue-actions{margin-top:18px}
-    summary{cursor:pointer;color:#f3d5a7;font-weight:bold;margin-top:15px}
-    .premium{background:#120f0c}
-    .premium{background:#120f0c}
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter Tight', sans-serif;
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    color: var(--text-primary);
+    background: var(--bg-black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
 
-/* PEGA AQUI ↓↓↓ */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+  }
 
-.brideplus-section{
-  position:relative;
-  max-width:900px;
-  margin:120px auto;
-  padding:80px 50px;
-  text-align:center;
-  border-radius:40px;
+  .announce {
+    background: var(--bg-black);
+    color: var(--text-primary);
+    text-align: center;
+    padding: calc(10px + var(--safe-top)) 16px 10px;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .announce strong { color: var(--gold-bright); font-weight: 500; }
+  .announce .dot { display: inline-block; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin: 0 8px; vertical-align: middle; animation: blink 2s infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  background:
-    radial-gradient(circle at top,
-    rgba(212,175,120,.12),
-    transparent 60%),
-    #0a0705;
+  nav {
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-logo-text {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+  }
+  .nav-cta {
+    background: var(--text-primary);
+    color: var(--bg-black);
+    padding: 9px 20px;
+    border-radius: 100px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  .nav-cta:active { transform: scale(0.96); background: var(--gold-bright); }
 
-  border:1px solid rgba(212,175,120,.18);
+  .hero-immersive {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+    background: var(--bg-black);
+  }
+  .hero-immersive::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35) saturate(0.7) sepia(0.25) blur(2px);
+    z-index: 0;
+  }
+  .hero-immersive::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at top right, rgba(196,165,120,0.18), transparent 50%),
+      linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(13,8,5,0.6) 50%, rgba(0,0,0,0.85) 100%);
+    z-index: 1;
+  }
 
-  overflow:hidden;
-}
+  .hero-logo-decor {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 140px;
+    height: 140px;
+    opacity: 0.45;
+    z-index: 2;
+    object-fit: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 20px rgba(196,165,120,0.3));
+  }
 
-.brideplus-section h2{
-  font-size:64px;
-  line-height:1;
-  margin-bottom:30px;
-  color:#e7c99f;
-}
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 60px 24px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.brideplus-section p{
-  max-width:700px;
-  margin:auto;
-  font-size:24px;
-  line-height:1.7;
-  color:rgba(255,255,255,.82);
-}
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--border-mid);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 28px;
+    animation: fadeUp 0.7s ease both;
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+  }
+  .pill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-bright); animation: blink 2s infinite; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
-.brideplus-btn{
-  display:inline-block;
-  margin-top:45px;
-  padding:18px 34px;
-  border-radius:999px;
+  h1.hero-title {
+    font-family: var(--serif);
+    font-size: clamp(48px, 12vw, 96px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+    color: var(--cream);
+    animation: fadeUp 0.8s 0.1s ease both;
+    max-width: 900px;
+  }
+  h1.hero-title .italic { font-style: italic; font-weight: 300; color: var(--gold-bright); }
 
-  background:#e7c99f;
-  color:#000;
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 580px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
 
-  font-weight:600;
-  text-decoration:none;
-  transition:.3s ease;
-}
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.9s 0.3s ease both;
+  }
+  .btn-cream {
+    background: var(--text-primary);
+    color: var(--bg-black);
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 8px 24px -8px rgba(247,236,217,0.3);
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-cream:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -8px rgba(247,236,217,0.4); }
+  .btn-cream:active { transform: scale(0.97); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-outline:hover { background: rgba(247,236,217,0.1); }
+  .btn-outline:active { transform: scale(0.97); }
 
-.brideplus-btn:hover{
-  transform:translateY(-3px);
-  opacity:.9;
-}
+  .price-section {
+    background: var(--bg-black);
+    padding: 80px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .price-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(196,165,120,0.08), transparent 60%);
+    pointer-events: none;
+  }
+  .price-card-center {
+    background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+    border-radius: 24px;
+    padding: 40px 28px;
+    border: 1px solid var(--border-mid);
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 24px 48px -16px rgba(0,0,0,0.8), inset 0 1px 0 rgba(196,165,120,0.15);
+    overflow: hidden;
+  }
+  .price-card-center::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(196,165,120,0.2), transparent 70%);
+    pointer-events: none;
+  }
+  .founding-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(196,165,120,0.12);
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 9.5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .founding-stamp::before { content: '✦'; font-style: normal; }
+  .price-flex {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 14px;
+    gap: 14px;
+    position: relative;
+  }
+  .price-old {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--text-tertiary);
+    text-decoration: line-through;
+    font-weight: 300;
+    opacity: 0.65;
+  }
+  .price-new {
+    font-family: var(--serif);
+    font-size: 64px;
+    color: var(--cream);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .price-meta {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 22px;
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, #ffffff 0%, var(--text-primary) 100%);
+    color: var(--bg-black);
+    width: 100%;
+    padding: 17px 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: block;
+    text-align: center;
+    box-shadow: 0 8px 24px -8px rgba(247,236,217,0.3);
+    text-decoration: none;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -8px rgba(247,236,217,0.4); }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-primary::after {
+    content: ' →';
+    display: inline-block;
+    transition: transform 0.3s;
+  }
 
-.brideplus-glow{
-  position:absolute;
-  width:500px;
-  height:500px;
-  background:rgba(231,201,159,.06);
-  filter:blur(120px);
+  .trust-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 22px;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+  .trust-row span { display: flex; align-items: center; gap: 6px; }
+  .trust-row span::before { content: "✓"; color: var(--gold); font-weight: bold; }
 
-  top:-200px;
-  left:50%;
-  transform:translateX(-50%);
-}
+  .spots-bar {
+    background: var(--bg-black);
+    color: var(--text-primary);
+    padding: 32px 20px;
+    overflow: hidden;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    text-align: center;
+    position: relative;
+  }
+  .spots-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 14px;
+  }
+  .spots-progress {
+    max-width: 480px;
+    margin: 0 auto;
+    background: rgba(196,165,120,0.12);
+    height: 6px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .spots-fill {
+    background: linear-gradient(90deg, var(--gold-soft), var(--gold-bright));
+    height: 100%;
+    width: 0%;
+    border-radius: 100px;
+    transition: width 1.5s ease;
+    box-shadow: 0 0 12px rgba(196,165,120,0.4);
+  }
+  .spots-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--text-primary);
+  }
+  .spots-text strong { color: var(--gold-bright); font-style: normal; font-weight: 500; }
 
-/* HASTA AQUI ↑↑↑ */
+  section { padding: 80px 24px; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; }
 
-footer{text-align:center;padding:40px;background:#050403;color:#fff7ef;font-size:14px}
-    footer{text-align:center;padding:40px;background:#050403;color:#fff7ef;font-size:14px}
-    .small{font-size:13px;opacity:.75}
-    @media(max-width:850px){
-      nav{display:block;text-align:center}
-      nav div:last-child{margin-top:10px}
-      nav a{margin:6px;font-size:13px}
-      .venue-layout{grid-template-columns:1fr}
-      #map{height:420px}
-    }
+  .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 16px;
+    font-weight: 500;
+    display: inline-block;
+  }
+  h2.section-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 7vw, 52px);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: var(--cream);
+  }
+  h2.section-title .italic { font-style: italic; font-weight: 300; color: var(--gold-bright); }
+  .section-intro {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin-bottom: 8px;
+  }
 
-    <style>
+  .founder-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .founder-section .logo-watermark {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    opacity: 0.05;
+    pointer-events: none;
+    object-fit: contain;
+  }
+  .founder-card {
+    background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+    border-radius: 24px;
+    padding: 40px 30px 36px;
+    margin-top: 36px;
+    border: 1px solid var(--border-mid);
+    position: relative;
+    box-shadow: 0 16px 40px -20px rgba(0,0,0,0.7);
+  }
+  .founder-logo-mark {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 26px;
+    filter: drop-shadow(0 4px 16px rgba(196,165,120,0.35));
+  }
+  .founder-quote {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--cream);
+    margin-bottom: 18px;
+    letter-spacing: -0.005em;
+  }
+  .founder-quote strong {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--gold-bright);
+  }
+  .founder-attribution {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+    margin-top: 12px;
+  }
+  .founder-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color: var(--bg-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px -4px rgba(196,165,120,0.5);
+  }
+  .founder-info .name {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cream);
+  }
+  .founder-info .role {
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 3px;
+  }
 
-body{
-  background:#050505;
-  color:white;
-}
+  .problem-stack { display: grid; gap: 14px; margin-top: 40px; }
+  .problem-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 28px 24px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px -8px rgba(0,0,0,0.5);
+  }
+  .problem-card:hover { border-color: var(--border-mid); transform: translateY(-2px); }
+  .problem-card .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 36px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .problem-card h3 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+  }
+  .problem-card p { color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; }
 
-/* tus otros estilos */
+  .features { background: var(--bg-black); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .features-grid { display: grid; gap: 14px; margin-top: 44px; }
+  .feature {
+    background: var(--bg-card);
+    padding: 30px 24px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 4px 16px -8px rgba(0,0,0,0.5);
+  }
+  .feature:hover { border-color: var(--border-mid); transform: translateY(-2px); }
+  .feature-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+    color: var(--gold-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px -4px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-mid);
+  }
+  .feature h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+  }
+  .feature p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
+  .feature .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dotted var(--border-mid);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .feature .status.ready { color: #8bc97c; }
+  .feature .status.ready::before { content: '●'; }
+  .feature .status.soon { color: var(--gold); }
+  .feature .status.soon::before { content: '○'; }
+  .feature.dark {
+    background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+    border-color: var(--border-mid);
+    box-shadow: 0 12px 32px -16px rgba(196,165,120,0.25);
+  }
+  .feature.dark .feature-icon { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: var(--bg-black); border-color: transparent; box-shadow: 0 8px 20px -8px rgba(196,165,120,0.5); }
+  .feature.dark .status { color: var(--gold-bright); border-color: var(--border-mid); }
 
-.card{
-  border-radius:30px;
-}
+  .founding-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .founding-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(196,165,120,0.1), transparent 60%);
+    pointer-events: none;
+  }
+  .founding-section .container { position: relative; }
 
-/* AQUI PEGAS ESTO ↓↓↓ */
+  .perks-grid { display: grid; gap: 14px; margin-top: 40px; }
+  .perk-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-mid);
+    border-radius: 20px;
+    padding: 26px 24px;
+    transition: all 0.3s;
+  }
+  .perk-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+  .perk-card .perk-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold-bright);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .perk-card h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .perk-card p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
 
-.fashion-row td{
-  padding:16px 18px;
-  border-top:1px solid rgba(212,184,
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629244702268994"
-     crossorigin="anonymous"></script>
+  .roadmap {
+    margin-top: 40px;
+    background: var(--bg-black);
+    border-radius: 24px;
+    padding: 30px 24px;
+    border: 1px solid var(--border-soft);
+  }
+  .roadmap-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .roadmap-item:last-child { border-bottom: none; }
+  .roadmap-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .roadmap-dot.done { background: var(--gold-bright); box-shadow: 0 0 8px rgba(196,165,120,0.4); }
+  .roadmap-dot.now { background: var(--gold-bright); box-shadow: 0 0 0 4px rgba(196,165,120,0.3), 0 0 12px rgba(196,165,120,0.5); animation: blink 2s infinite; }
+  .roadmap-dot.next { background: transparent; border: 2px solid var(--border-mid); }
+  .roadmap-content { flex: 1; }
+  .roadmap-when {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 4px;
+  }
+  .roadmap-content h4 {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+  .roadmap-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .compare-table {
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-mid);
+    background: var(--bg-card);
+    box-shadow: 0 12px 32px -16px rgba(0,0,0,0.5);
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr 0.9fr;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row > div { padding: 16px 12px; font-size: 13px; }
+  .compare-row.header { background: var(--bg-black); color: var(--cream); }
+  .compare-row.header > div {
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 18px 12px;
+    color: var(--text-secondary);
+  }
+  .compare-row.header .highlight { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: var(--bg-black); font-weight: 600; }
+  .compare-feat { color: var(--text-secondary); border-right: 1px solid var(--border-soft); font-weight: 500; }
+  .compare-cell { text-align: center; font-size: 12.5px; display: flex; align-items: center; justify-content: center; }
+  .compare-cell.no { color: var(--text-muted); }
+  .compare-cell.yes { color: var(--gold-bright); font-weight: 600; }
+  .compare-row .highlight { background: rgba(196,165,120,0.05); border-left: 1px solid var(--border-mid); }
+
+  .faq { background: var(--bg-black); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .faq-list { margin-top: 40px; }
+  .faq-item {
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid var(--border-soft);
+  }
+  .faq-item:hover { border-color: var(--border-mid); }
+  .faq-item[open] { border-color: var(--gold); background: var(--bg-elevated); }
+  .faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.25;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--gold-bright);
+    transition: transform 0.3s;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-answer {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  .final-cta {
+    background: var(--bg-black);
+    color: var(--text-primary);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border-soft);
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(196,165,120,0.15), transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta .container { position: relative; }
+  .final-cta .logo-final {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 28px;
+    display: block;
+    filter: drop-shadow(0 4px 20px rgba(196,165,120,0.45));
+  }
+  .final-cta h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 8vw, 64px);
+    color: var(--cream);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .final-cta h2 .italic { font-style: italic; font-weight: 300; color: var(--gold-bright); }
+  .final-cta p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.65;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta .btn-primary {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .guarantee {
+    margin-top: 24px;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+
+  footer {
+    background: var(--bg-black);
+    padding: 50px 24px calc(120px + var(--safe-bottom));
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    border-top: 1px solid var(--border-soft);
+  }
+  footer .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  footer .footer-logo img { width: 34px; height: 34px; object-fit: contain; }
+  footer .footer-logo .nav-logo-text { font-size: 20px; }
+  footer .links a { color: var(--gold); margin: 0 8px; font-size: 13px; }
+  footer .copyright {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .sticky-buy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.96);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    padding: 12px 16px calc(12px + var(--safe-bottom));
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transform: translateY(120%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-top: 1px solid var(--border-mid);
+  }
+  .sticky-buy.visible { transform: translateY(0); }
+  .sticky-buy-info { color: var(--cream); flex: 1; min-width: 0; }
+  .sticky-buy-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold-bright);
+    margin-bottom: 1px;
+  }
+  .sticky-buy-price {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .sticky-buy .btn {
+    background: var(--text-primary);
+    color: var(--bg-black);
+    padding: 13px 22px;
+    border-radius: 100px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    white-space: nowrap;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+  .sticky-buy .btn:active { transform: scale(0.95); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (min-width: 768px) {
+    section { padding: 110px 32px; }
+    nav { padding: 22px 40px; }
+    .hero-content { padding: 80px 40px; }
+    .price-section { padding: 100px 40px; }
+    .hero-logo-decor { width: 200px; height: 200px; bottom: 60px; right: 60px; opacity: 0.5; }
+    .problem-stack { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .perks-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .feature.dark { grid-column: span 2; }
+    .sticky-buy { display: none; }
+    footer { padding-bottom: 50px; }
+    .nav-logo-text { font-size: 24px; }
+    .founder-logo-mark { width: 80px; height: 80px; }
+    .final-cta .logo-final { width: 88px; height: 88px; }
+  }
+  @media (min-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(3, 1fr); }
+    .feature.dark { grid-column: span 3; }
+    h1.hero-title { font-size: clamp(64px, 7vw, 96px); }
+    .hero-logo-decor { width: 240px; height: 240px; }
+  }
+  @media (max-width: 360px) {
+    .announce { font-size: 9.5px; letter-spacing: 0.15em; padding-left: 10px; padding-right: 10px; }
+  }
+</style>
 </head>
-
 <body>
 
+<div class="announce">
+  🤍 Templates · Scripts · Guías curadas · <strong>$19 USD</strong> <span class="dot"></span> Solo primeras <strong>50</strong> plazas
+</div>
+
 <nav>
-  <div class="brand">The Panama Bride</div>
-  <div>
-    <a href="#planner">Planner</a>
-    <a href="#venues">Venues</a>
-    <a href="#brunch">Bridal Shower</a>
-    <a href="#fashion">Vestidos</a>
-    <a href="premium.html">Bride+</a>
-  </div>
+  <a href="index.html" class="logo-wrap">
+    <span class="nav-logo-text">The Panama Bride</span>
+  </a>
+  <a href="premium.html" class="nav-cta">Bride+</a>
 </nav>
 
-<section class="hero">
-  <div class="center">
-    <h1>The Panama Bride</h1>
-    <p>La guía moderna, elegante y práctica para planificar tu boda en Panamá.</p>
-    <a class="btn" href="#planner">Empezar mi planner</a>
-    <a class="btn alt" href="#venues">Explorar venues</a>
+<section class="hero-immersive">
+  <img src="logo.png" alt="" class="hero-logo-decor">
+  <div class="hero-content">
+    <div class="hero-pill">
+      <span class="pill-dot"></span>
+      Founding Cohort · Apertura 2026
+    </div>
+    <h1 class="hero-title">El playbook<br>secreto para<br>casarte <span class="italic">en Panamá.</span></h1>
+    <p class="hero-sub">Templates listos. Scripts para negociar. Timeline curado. Presupuesto real. <strong style="color: var(--cream);">Todo lo que tu mejor amiga te daría</strong> — si ya se hubiera casado en Panamá.</p>
+    <div class="hero-buttons">
+      <a href="#comprar" class="btn-cream">Reservar mi lugar</a>
+      <a href="premium.html" class="btn-outline">Acceder al dashboard</a>
+    </div>
   </div>
 </section>
 
-<section id="planner">
-
-  <div class="center">
-    <h2>Descubre el perfil de tu boda</h2>
-    <p style="max-width:850px;margin:auto;">
-      Responde unas preguntas rápidas y recibe una primera guía personalizada según tu estilo,
-      invitados, presupuesto y visión de boda en Panamá.
-    </p>
+<section class="price-section">
+  <div class="container">
+    <div class="price-card-center">
+      <span class="founding-stamp">Founding Member</span>
+      <div class="price-flex">
+        <span class="price-old">$49</span>
+        <span class="price-new">$19</span>
+      </div>
+      <div class="price-meta">Pago único · Acceso de por vida · Updates gratis siempre</div>
+      <a href="#comprar" class="btn-primary">Reservar mi lugar</a>
+      <div class="trust-row">
+        <span>Garantía 14 días</span>
+        <span>Acceso inmediato</span>
+        <span>Precio congelado</span>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="card center" style="margin-top:40px;text-align:left;max-width:1100px;">
+<div class="spots-bar">
+  <div class="spots-label">Plazas Founding</div>
+  <div class="spots-progress">
+    <div class="spots-fill" id="spotsFill"></div>
+  </div>
+  <div class="spots-text"><strong id="spotsTaken">0</strong> de 50 plazas reservadas</div>
+</div>
 
-    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+<section class="founder-section">
+  <img src="logo.png" alt="" class="logo-watermark">
+  <div class="container">
+    <div class="eyebrow reveal">Carta de la fundadora</div>
+    <h2 class="section-title reveal">La amiga <span class="italic">que te falta.</span></h2>
+    <p class="section-intro reveal">Esa que ya se casó, que tiene todos los contactos, que sabe los precios reales, y te dice exactamente qué hacer. Ahora en formato playbook.</p>
+
+    <div class="founder-card reveal">
+      <img src="logo.png" alt="" class="founder-logo-mark">
+      <p class="founder-quote">Cuando empecé a planear mi propia boda en Panamá, me di cuenta de algo: <strong>la información buena estaba dispersa.</strong> En grupos privados de WhatsApp, en consejos sueltos de amigas, en cotizaciones que tocaba pedir una por una.</p>
+      <p class="founder-quote">Antes de contactar a un wedding planner o cualquier proveedor, terminas haciendo <strong>horas y horas de research</strong> — guardando posts en Instagram, comparando precios a escondidas, escribiendo el mismo mensaje a 15 vendors, preguntando en grupos sin saber a quién creerle.</p>
+      <p class="founder-quote">Así que decidí construirlo todo en un solo lugar: <strong>templates listos para mandar, scripts para negociar, timeline curado, presupuesto real, y los secretos que aprendí.</strong> Como si tuvieras una amiga que ya se casó y te pasa todo — con sus contactos, sus errores, y sus atajos.</p>
+      <div class="founder-attribution">
+        <div class="founder-avatar">P</div>
+        <div class="founder-info">
+          <div class="name">The Panama Bride</div>
+          <div class="role">Fundadora · Ciudad de Panamá</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow reveal">El problema real</div>
+    <h2 class="section-title reveal">Planear una boda en Panamá es <span class="italic">caos disfrazado</span> de Pinterest.</h2>
+
+    <div class="problem-stack">
+      <div class="problem-card reveal">
+        <div class="num">01</div>
+        <h3>Los precios son secreto</h3>
+        <p>Nadie publica precios de venues, fotógrafos ni catering. Toca pedir cotización a 20 personas y compararlas tú sola.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="num">02</div>
+        <h3>No sabes qué preguntar</h3>
+        <p>Los vendors te venden paquetes "premium" al doble si no llegas con las preguntas correctas. Las novias de primera vez pagan precio de novata.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="num">03</div>
+        <h3>Pinterest no es Panamá</h3>
+        <p>El 90% del contenido es de EE.UU. o Europa. Lo que se ve hermoso allá se ve raro con luz tropical, humedad y nuestras temporadas.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="num">04</div>
+        <h3>Estás sola en esto</h3>
+        <p>Tu mamá se casó hace 30 años, tus amigas no se han casado, y los planners cobran $3,000+ solo para empezar a hablar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE RECIBES: 6 pilares concretos -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft);">
+  <div class="container">
+    <div class="eyebrow reveal">Lo que recibes</div>
+    <h2 class="section-title reveal">Tu kit <span class="italic">completo.</span></h2>
+    <p class="section-intro reveal">No es inspiración. Es <strong style="color: var(--gold-bright);">200+ horas de research</strong> ya hechas por ti — empaquetadas en templates, scripts, guías editoriales y herramientas que se usan el mismo día.</p>
+
+    <div style="display: grid; gap: 16px; margin-top: 40px;">
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); line-height: 1;">01</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Templates listos para usar</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">Save the dates, invitaciones, RSVPs, seating charts, menús, programas de ceremonia, welcome bag cards, thank you cards. <strong style="color: var(--gold-bright);">Editables en Canva.</strong> Cambias tus datos y listo.</p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">10 plantillas iniciales</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Estética luxury editorial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); line-height: 1;">02</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Scripts para WhatsApp</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">24 plantillas para cotizar, negociar y cerrar con vendors sin sentirte mal. <strong style="color: var(--gold-bright);">Cambias [nombre] y mandas.</strong> Para venues, fotógrafos, catering, DJ, floral, makeup, planners.</p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">5 capítulos</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Negociación incluida</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Cierres incómodos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); line-height: 1;">03</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Guías editoriales (PDFs)</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">Timeline de 12 meses, Budget Bible con 3 tiers y costos ocultos, Bridesmaids Playbook para regalar a tus damas, Vendor Black Book. <strong style="color: var(--gold-bright);">PDFs editoriales listos para imprimir o leer en el teléfono.</strong></p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">5 PDFs · 100+ páginas</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Específico para Panamá</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); line-height: 1;">04</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Dashboard interactivo + Mapa de venues</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">40+ venues en mapa interactivo con capacidad, precios y zona. Comparas en segundos en lugar de Google buscar uno por uno. <strong style="color: var(--gold-bright);">Wedding Cost Estimator</strong> que calcula tu presupuesto según vendors elegidos.</p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">40+ venues</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Calculadora interactiva</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Filtros por zona</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); line-height: 1;">05</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Directorio curado de proveedores</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">18 wedding planners, 31 boutiques de vestidos, 51 decoradores, 20 lugares para fotos, 20 opciones mamá de novia. <strong style="color: var(--gold-bright);">Con contactos directos</strong> — WhatsApp, Instagram, web.</p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">140+ contactos</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Con rangos de precio</span>
+              <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Filtros por estilo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card reveal" style="border-left: 3px solid var(--gold); background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;">
+          <div style="font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold-bright); line-height: 1;">06</div>
+          <div>
+            <h3 style="font-family: var(--serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; font-weight: 500;">Comunidad WhatsApp privada</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 10px;">Solo 50 Founding Members en el grupo privado. Donde la novia que se casó el mes pasado <strong style="color: var(--gold-bright);">te dice qué floral salió 30% más barato</strong>, qué planner se atrasó, qué venue tenía fees ocultos. Recomendaciones en tiempo real.</p>
+            <div>
+              <span class="tag" style="background: rgba(196,165,120,0.12); border-color: var(--gold); color: var(--gold-bright); font-size: 10.5px;">Solo 50 plazas</span>
+              <span class="tag" style="background: rgba(196,165,120,0.12); border-color: var(--gold); color: var(--gold-bright); font-size: 10.5px;">Founding exclusivo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Time saved highlight -->
+    <div class="reveal" style="margin-top: 50px; text-align: center; padding: 36px 28px; background: var(--bg-deepest); border-radius: 24px; border: 1px solid var(--border-mid); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(196,165,120,0.12), transparent 60%); pointer-events: none;"></div>
+      <div style="position: relative;">
+        <div style="font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 14px; font-weight: 500;">El resultado</div>
+        <h3 style="font-family: var(--serif); font-size: clamp(28px, 5vw, 38px); color: var(--cream); font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 12px;">~160 horas ahorradas. <span style="font-style: italic; color: var(--gold-bright); font-weight: 300;">Sin perder los detalles.</span></h3>
+        <p style="font-size: 15px; color: var(--text-secondary); max-width: 540px; margin: 0 auto; line-height: 1.65;">El research promedio de una novia panameña es <strong style="color: var(--gold-bright);">200+ horas</strong>. Con Bride+, la mayoría se reduce a 40. Las otras 160 las usas en lo que importa.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="features" id="que-incluye">
+  <div class="container">
+    <div class="eyebrow reveal">Qué incluye Bride+</div>
+    <h2 class="section-title reveal">Lo que estamos <span class="italic">construyendo.</span></h2>
+    <p class="section-intro reveal">Algunos recursos están listos hoy; otros llegan en los próximos meses. Como Founding Member los recibes todos sin pagar de nuevo.</p>
+
+    <div class="features-grid">
+      <div class="feature reveal">
+        <div class="feature-icon">i</div>
+        <h3>Dashboard Premium</h3>
+        <p>Acceso al directorio curado: 18 wedding planners, 20 lugares para fotos, 31 boutiques, 51 decoradores con contactos directos.</p>
+        <div class="status ready">Disponible ahora</div>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">ii</div>
+        <h3>Cost Estimator</h3>
+        <p>Calculadora interactiva con rangos reales del mercado panameño. Combinas vendors y obtienes presupuesto estimado al instante.</p>
+        <div class="status ready">Disponible ahora</div>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">iii</div>
+        <h3>Timeline 12 Meses</h3>
+        <p>Guía editorial mes a mes con checklists, tips de planner y plazos críticos del mercado panameño.</p>
+        <div class="status ready">Disponible ahora</div>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">iv</div>
+        <h3>Scripts WhatsApp</h3>
+        <p>Plantillas para cotizar, negociar y cerrar contratos con vendors sin sentirte mal. Cambias nombre y mandas.</p>
+        <div class="status ready">Disponible ahora</div>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">v</div>
+        <h3>Budget Bible</h3>
+        <p>Los 3 tiers de presupuesto en Panamá con breakdown por categoría y los 9 costos ocultos que sorprenden a toda novia.</p>
+        <div class="status ready">Disponible ahora</div>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">vi</div>
+        <h3>Plantillas Canva</h3>
+        <p>Save the dates, invitaciones, seating charts, menús. Editables, listas para imprimir.</p>
+        <div class="status soon">Próximamente Q2</div>
+      </div>
+      <div class="feature dark reveal">
+        <div class="feature-icon">★</div>
+        <h3>Comunidad Founding</h3>
+        <p>Grupo privado de WhatsApp con las primeras 50 novias planeando su boda en Panamá. Conversaciones reales, recomendaciones honestas, consejos en tiempo real. Aquí es donde sucede la magia.</p>
+        <div class="status">Acceso Founding · Exclusivo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founding-section">
+  <div class="container">
+    <div class="eyebrow reveal">Por qué Founding Member</div>
+    <h2 class="section-title reveal">No es marketing. <span class="italic">Es construir juntas.</span></h2>
+    <p class="section-intro reveal">Las primeras 50 novias que entran no compran un producto terminado. Compran un asiento en la mesa donde se decide qué se construye después.</p>
+
+    <div class="perks-grid">
+      <div class="perk-card reveal">
+        <div class="perk-num">Beneficio 01</div>
+        <h3>El precio más bajo · para siempre</h3>
+        <p>$19 USD ahora. Cuando lleguemos a 50 sube a $49, luego a $79. Tu precio queda congelado de por vida.</p>
+      </div>
+      <div class="perk-card reveal">
+        <div class="perk-num">Beneficio 02</div>
+        <h3>Tu voz moldea el producto</h3>
+        <p>Cada Founding Member tiene voto directo en qué construimos próximo. Pides un recurso, lo creamos.</p>
+      </div>
+      <div class="perk-card reveal">
+        <div class="perk-num">Beneficio 03</div>
+        <h3>Acceso a todo lo futuro</h3>
+        <p>Cada cosa nueva que sumemos — calculadora, plantillas, guías — llega a tu cuenta sin pagar de nuevo.</p>
+      </div>
+      <div class="perk-card reveal">
+        <div class="perk-num">Beneficio 04</div>
+        <h3>Comunidad pequeña y curada</h3>
+        <p>Solo 50 novias en el grupo privado inicial. Conversaciones íntimas, no un grupo masivo y ruidoso.</p>
+      </div>
+    </div>
+
+    <div class="roadmap reveal">
+      <div class="roadmap-item">
+        <div class="roadmap-dot done"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-when">Listo · 2026</div>
+          <h4>Dashboard, Cost Estimator, Timeline, Scripts, Budget Bible</h4>
+          <p>Los 5 recursos foundation están en tu cuenta desde día uno.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot now"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-when">En construcción · Q2 2026</div>
+          <h4>Plantillas Canva + Bridesmaids Playbook</h4>
+          <p>Las Founding Members elegirán los primeros 10 templates por votación.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot next"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-when">Próximo · Q3 2026</div>
+          <h4>Guía de Venues con fotos y precios reales</h4>
+          <p>Investigación en terreno de todos los venues principales de Panamá.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot next"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-when">Futuro · Q4 2026</div>
+          <h4>App móvil + Eventos exclusivos para members</h4>
+          <p>Brunches, visitas guiadas a venues, tardes de prueba de vestido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow reveal">Por qué Bride+</div>
+    <h2 class="section-title reveal">Lo mismo que un planner, por el <span class="italic">1% del precio.</span></h2>
+
+    <div class="compare-table reveal">
+      <div class="compare-row header">
+        <div>Característica</div>
+        <div>Sola</div>
+        <div class="highlight">Bride+</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Vendors con precios</div>
+        <div class="compare-cell no">✗</div>
+        <div class="compare-cell yes highlight">✓</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Scripts negociación</div>
+        <div class="compare-cell no">✗</div>
+        <div class="compare-cell yes highlight">✓</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Budget Bible Panamá</div>
+        <div class="compare-cell no">✗</div>
+        <div class="compare-cell yes highlight">✓</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Timeline curado</div>
+        <div class="compare-cell no">Pinterest</div>
+        <div class="compare-cell yes highlight">✓</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Comunidad novias</div>
+        <div class="compare-cell no">✗</div>
+        <div class="compare-cell yes highlight">✓</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Tiempo invertido</div>
+        <div class="compare-cell no">200+ hrs</div>
+        <div class="compare-cell yes highlight">~40 hrs</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feat">Inversión</div>
+        <div class="compare-cell no">$3k+</div>
+        <div class="compare-cell yes highlight"><strong style="color: var(--bg-black);">$19</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow reveal">Preguntas honestas</div>
+    <h2 class="section-title reveal">Lo que probablemente <span class="italic">te preguntas.</span></h2>
+
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Si es nuevo, ¿por qué confiar?</summary>
+        <div class="faq-answer">Justamente por eso ofrezco garantía de 14 días, no 7. Tienes dos semanas completas para revisar todo, hablar con la comunidad y decidir. Si no es para ti, devolución completa sin preguntas. El riesgo lo asumo yo, no tú.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Qué tengo ya disponible al pagar?</summary>
+        <div class="faq-answer">Acceso inmediato al Dashboard Premium con 18 wedding planners contactos directos, 20 lugares para fotos, 31 boutiques de vestidos, 51 decoradores, Wedding Cost Estimator interactivo, Timeline de 12 meses, Scripts de WhatsApp, Budget Bible. Más el grupo privado de Founding Members.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Es una suscripción mensual?</summary>
+        <div class="faq-answer">No. Es pago único de $19 USD. Una sola vez. Acceso de por vida, incluyendo todas las actualizaciones futuras. Founding Members nunca pagan de nuevo.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Qué pasa cuando se llenen las 50 plazas?</summary>
+        <div class="faq-answer">El precio sube a $49 USD para el siguiente grupo, y eventualmente a $79. Las Founding Members mantienen su precio original para siempre, además de los beneficios exclusivos (voto en producto, comunidad inicial pequeña, acceso a eventos).</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Sirve si mi boda es en pocos meses?</summary>
+        <div class="faq-answer">Sí. El Timeline incluye versión compressed para bodas urgentes, y el Dashboard te ahorra semanas de investigación inmediatamente con contactos directos a los mejores vendors.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Sirve si soy destination bride?</summary>
+        <div class="faq-answer">Especialmente. Bride+ está pensado para que puedas coordinar todo desde cualquier país. Los scripts y el directorio con contactos directos son oro para destination brides.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET: Freebie gratis -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(196,165,120,0.08), transparent 60%); pointer-events: none;"></div>
+  <div class="container" style="position: relative;">
+    <div class="eyebrow reveal">¿Aún no estás lista?</div>
+    <h2 class="section-title reveal">Empieza <span class="italic">gratis.</span></h2>
+    <p class="section-intro reveal">Descarga el <strong style="color: var(--gold-bright);">Wedding Reality Check</strong> — la guía PDF con las 25 cosas que TODA novia panameña debería saber antes de gastar un dólar. Costos ocultos, plazos críticos y errores que cuestan miles.</p>
+
+    <div class="reveal" style="margin-top: 36px; background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-card) 100%); border-radius: 24px; padding: 36px 28px; border: 1px solid var(--border-mid); box-shadow: 0 16px 40px -20px rgba(0,0,0,0.6); display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center; max-width: 720px; margin-left: auto; margin-right: auto;">
 
       <div>
-        <label>¿Dónde viven actualmente?</label>
-        <select id="location">
-          <option>Panamá</option>
-          <option>Estados Unidos</option>
-          <option>Canadá</option>
-          <option>Europa</option>
-          <option>Latinoamérica</option>
-          <option>Otro</option>
-        </select>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <span class="founding-stamp" style="margin: 0;">Gratis ✦ PDF</span>
+        </div>
+        <h3 style="font-family: var(--serif); font-size: 26px; color: var(--cream); margin-bottom: 12px; line-height: 1.15; letter-spacing: -0.01em; font-weight: 500;">Wedding Reality Check <span style="font-style: italic; color: var(--gold-bright); font-weight: 300;">— 25 verdades.</span></h3>
+        <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 0;">8 páginas editoriales con lo que ningún wedding planner te va a contar. Te llega al email al instante.</p>
 
-        <label>¿Será destination wedding?</label>
-        <select id="destination">
-          <option>Sí</option>
-          <option>No</option>
-          <option>Tal vez</option>
-        </select>
-
-        <label>Prioridad principal</label>
-        <select id="priority">
-          <option>Venue</option>
-          <option>Decoración</option>
-          <option>Foto / video</option>
-          <option>Experiencia invitados</option>
-          <option>Moda / vestidos</option>
-          <option>Comida & bebidas</option>
-        </select>
+        <div style="margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">ITBMS + service charges</span>
+          <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">Fees ocultos típicos</span>
+          <span class="tag" style="background: rgba(196,165,120,0.08); border-color: var(--border-soft); color: var(--text-secondary); font-size: 10.5px;">12 plazos críticos</span>
+        </div>
       </div>
 
-      <div>
-        <label>Invitados estimados</label>
-        <select id="guests">
-          <option value="íntima">Menos de 50</option>
-          <option value="media">50–120</option>
-          <option value="grande">120–300</option>
-          <option value="mega">300+</option>
-        </select>
-
-        <label>Estilo principal</label>
-        <select id="vibe">
-          <option value="luxury">Luxury editorial</option>
-          <option value="playa">Tropical / playa</option>
-          <option value="romántica">Romántica / jardín</option>
-          <option value="moderna">Moderna / ciudad</option>
-          <option value="oldmoney">Old money</option>
-          <option value="european">European summer</option>
-        </select>
-
-        <label>Presupuesto</label>
-        <select id="budget">
-          <option value="simple">Simple pero lindo</option>
-          <option value="medio">Intermedio</option>
-          <option value="premium">Bride+</option>
-          <option value="luxury">Luxury alto</option>
-        </select>
-      </div>
-
-    </div>
-
-    <div style="margin-top:30px;text-align:center;">
-      <div style="margin-bottom:18px;">
-        <span class="tag">Personalized wedding profile</span>
-        <span class="tag">Panamá insights</span>
-        <span class="tag">Budget guidance</span>
-        <span class="tag">Pinterest vibes</span>
-      </div>
-
-      <button onclick="crearPlan()" style="font-size:16px;padding:16px 34px;">
-        Ver mi roadmap
-      </button>
-
-      <a href="https://forms.gle/HPW89n1t3o8uySfy9" target="_blank" class="btn alt" style="font-size:16px;padding:16px 34px;">
-        Obtener código promocional
+      <a href="https://forms.gle/HPW89n1t3o8uySfy9" target="_blank" rel="noopener" class="btn-primary" style="text-decoration: none; margin: 0;">
+        Descargar gratis
       </a>
+
     </div>
-
-    <div id="plan" class="card hidden" style="margin-top:35px;"></div>
-
-  </div>
-
-</section>
-
-<section id="venues">
-  <div class="center">
-    <h2>Venues en Panamá</h2>
-    <p>Selecciona una categoría para ver opciones curadas en lista y mapa. Capacidades y precios son referenciales.</p>
-
-    <select id="venueFilter" onchange="filtrarVenues()" required>
-      <option value="">Selecciona una categoría</option>
-      <option value="Ciudad">Ciudad</option>
-      <option value="Playa">Playa</option>
-      <option value="Montaña">Montaña</option>
-      <option value="Naturaleza">Naturaleza</option>
-    </select>
-  </div>
-
-  <div class="venue-layout">
-    <div id="map"></div>
-    <div class="venue-list" id="venueGrid"></div>
   </div>
 </section>
 
-<section id="brunch">
-  <div class="center">
-  <h2>Bridal showers & brindis</h2>
-
-  <p style="max-width:900px;margin:auto;">
-    Desde brunches editoriales hasta rooftops privados y beach clubs,
-    estas son algunas de las experiencias favoritas para celebrar antes del gran día en Panamá.
-  </p>
-
-  <div style="margin-top:20px;">
-    <span class="tag">Curated by vibe</span>
-    <span class="tag">Pinterest approved</span>
-    <span class="tag">Bridal energy</span>
-    <span class="tag">Panama edition</span>
-  </div>
-</div>
-
-<div class="grid" style="margin-top:45px;">
-
-  <div class="card">
-    <h3>Brunch elegante</h3>
-
-    <p>
-      Ideal para novias clásicas, mamás y bridal brunches íntimos.
-    </p>
-
-    <br>
-
-    <p><strong>Lugares recomendados:</strong></p>
-
-    <ul>
-      <li>Café Lavanda</li>
-      <li>Hotel Intercontinental Miramar</li>
-      <li>Casa Escondida</li>
-      <li>Sofitel</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">$$</span>
-    <span class="tag">Fotos lindas</span>
-    <span class="tag">Día</span>
-    <span class="tag">Old money vibes</span>
-
-    <div style="margin-top:22px;">
-      <a href="premium.html" class="btn small-btn">
-        Ver lugares premium
-      </a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Rooftop / cena privada</h3>
-
-    <p>
-      Perfecto para bridal dinners, engagement cocktails o un brindis elegante.
-    </p>
-
-    <br>
-
-    <p><strong>Lugares recomendados:</strong></p>
-
-    <ul>
-      <li>Amarla Casco</li>
-      <li>Casa Casco</li>
-      <li>Tantalo Rooftop</li>
-      <li>Lazotea</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">$$$</span>
-    <span class="tag">Noche</span>
-    <span class="tag">Cocktail hour</span>
-    <span class="tag">City vibes</span>
-
-    <div style="margin-top:22px;">
-      <a href="premium.html" class="btn small-btn">
-        Ver rooftops privados
-      </a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Outdoors</h3>
-
-    <p>
-      Más romántico, editorial y Pinterest-core.
-      Perfecto para novias soft luxury.
-    </p>
-
-    <br>
-
-    <p><strong>Lugares recomendados:</strong></p>
-
-    <ul>
-      <li>Tomillo</li>
-      <li>Arrogante</li>
-      <li>Mahalo</li>
-      <li>Buenaventura Beach Club</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">$$</span>
-    <span class="tag">Día</span>
-    <span class="tag">Soft luxury</span>
-    <span class="tag">Garden aesthetic</span>
-
-    <div style="margin-top:22px;">
-      <a href="premium.html" class="btn small-btn">
-        Ver ideas decorativas
-      </a>
-    </div>
-  </div>
-</div>
-<section class="brideplus-section">
-
-  <div class="brideplus-glow"></div>
-
-  <h2>Soon: Bride+</h2>
-
-  <p>
-    Un directorio curado con lugares exclusivos,
-    beach setups, rooftops privados, planners,
-    vendors recomendados y experiencias únicas
-    para bodas y eventos en Panamá.
-  </p>
-
-  <a href="premium.html" class="brideplus-btn">
-    Explorar Bride+
-  </a>
-
-</section>
-</section>
-
-<section id="fashion">
-  <div class="center">
-    <h2>Vestidos & más</h2>
-    <p>Checklist de dónde buscar: boutiques, diseñadores, alquiler, vestidos civiles y accesorios.</p>
-  </div>
-
-  <div class="grid">
-    <div class="center">
-  <h2>Bridal Era</h2>
-
-  <p style="max-width:900px;margin:auto;">
-    Directorio curado de boutiques, diseñadores y ateliers para novias en Panamá.
-    Desde luxury couture hasta opciones modernas, civiles y bridal minimal.
-  </p>
-
-  <div style="margin-top:18px;">
-    <span class="tag">Bridal couture</span>
-    <span class="tag">Luxury boutiques</span>
-    <span class="tag">Panamá City</span>
-    <span class="tag">Curated selection</span>
-  </div>
-</div>
-
-<div class="grid" style="margin-top:40px;">
-
-  <div class="card">
-    <h3>Vestido principal</h3>
-
-    <ul>
-      <li>Comprar con 6–9 meses</li>
-      <li>Preguntar por ajustes</li>
-      <li>Confirmar tiempos de entrega</li>
-      <li>Guardar presupuesto para alteraciones</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">Luxury bridal</span>
-    <span class="tag">Couture</span>
-  </div>
-
-  <div class="card">
-    <h3>Vestido civil</h3>
-
-    <ul>
-      <li>Looks midi o minimal</li>
-      <li>Perfecto para fotos en Casco</li>
-      <li>Telas ligeras para Panamá</li>
-      <li>Ideal para bridal brunch o civil</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">Civil bride</span>
-    <span class="tag">Modern chic</span>
-  </div>
-
-  <div class="card">
-    <h3>Accesorios & segundo look</h3>
-
-    <ul>
-      <li>Velo y aretes statement</li>
-      <li>Zapatos cómodos para bailar</li>
-      <li>Second look para after party</li>
-      <li>Bolsos y piezas editoriales</li>
-    </ul>
-
-    <br>
-
-    <span class="tag">After party</span>
-    <span class="tag">Editorial bride</span>
-  </div>
-
-</div>
-
-<div class="card" style="margin-top:40px;">
-
-  <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;">
-
-    <div>
-      <h3 style="margin-bottom:8px;">
-        Directorio bridal Panamá
-      </h3>
-
-      <p style="margin:0;color:#cfcfcf;">
-        Boutiques, ateliers y diseñadores recomendados.
-      </p>
-    </div>
-
-    <div>
-      <span class="tag">20+ boutiques</span>
-      <span class="tag">Luxury</span>
-      <span class="tag">Bridal</span>
-    </div>
-
-  </div>
-
-  <div style="
-    overflow-x:auto;
-    margin-top:28px;
-    border:1px solid rgba(212,184,150,.18);
-    border-radius:18px;
-  ">
-
-    <table style="
-      width:100%;
-      border-collapse:collapse;
-      min-width:1100px;
-      font-size:15px;
-    ">
-
-      <thead style="
-        background:rgba(212,184,150,.08);
-        position:sticky;
-        top:0;
-      ">
-        <tr>
-          <th style="padding:18px;text-align:left;">Boutique</th>
-          <th style="padding:18px;text-align:left;">Tipo</th>
-          <th style="padding:18px;text-align:left;">Ubicación</th>
-          <th style="padding:18px;text-align:left;">Instagram / Web</th>
-          <th style="padding:18px;text-align:left;">Precio</th>
-          <th style="padding:18px;text-align:left;">Estilo</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr class="fashion-row">
-          <td>Bride to Be Panamá</td>
-          <td>Bridal Boutique</td>
-          <td>Panamá City</td>
-          <td>@bridetobepanama</td>
-          <td>$1k–$8k+</td>
-          <td>Luxury bridal</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Rosa Clará Panamá</td>
-          <td>Luxury Bridal</td>
-          <td>Panamá City</td>
-          <td>rosaclara.es</td>
-          <td>$1.5k–$10k</td>
-          <td>European elegant</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Vero Ángel</td>
-          <td>Couture Designer</td>
-          <td>Panamá City</td>
-          <td>@veroangel</td>
-          <td>$2k–$15k+</td>
-          <td>High couture</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Gabriela Vallarino</td>
-          <td>Designer</td>
-          <td>Panamá City</td>
-          <td>@gabrielavallarino</td>
-          <td>$1.5k–$10k</td>
-          <td>Modern sophisticated</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Tatiana Tzilefski</td>
-          <td>Couture Designer</td>
-          <td>Panamá City</td>
-          <td>@tatianatzilefski</td>
-          <td>$2k–$12k</td>
-          <td>Luxury glam</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Annie Chajin</td>
-          <td>Fashion Designer</td>
-          <td>Panamá City</td>
-          <td>@anniechajin</td>
-          <td>$2k–$15k</td>
-          <td>Editorial couture</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Olga Valdés Atelier</td>
-          <td>Couture Atelier</td>
-          <td>Panamá City</td>
-          <td>@olgavaldesatelier</td>
-          <td>$2k–$12k</td>
-          <td>Classic elegant</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Karyshka Atelier</td>
-          <td>Atelier</td>
-          <td>Costa del Este</td>
-          <td>@karyshkaatelier</td>
-          <td>$1.5k–$8k</td>
-          <td>Glam bridal</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Michelle Tissé</td>
-          <td>Couture</td>
-          <td>Panamá City</td>
-          <td>@michelletisse</td>
-          <td>$1.5k–$8k</td>
-          <td>Feminine luxury</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Ben Betesh</td>
-          <td>Multibrand Designer</td>
-          <td>Multiplaza</td>
-          <td>benbetesh.com</td>
-          <td>$300–$4k</td>
-          <td>Modern bridal</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Gaudí Panamá</td>
-          <td>Boutique</td>
-          <td>Multiplaza</td>
-          <td>@gaudipanama</td>
-          <td>$300–$3k</td>
-          <td>Bridal & gala</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Porta Romana</td>
-          <td>Luxury Boutique</td>
-          <td>Costa del Este</td>
-          <td>@portaromanapanama</td>
-          <td>$500–$5k</td>
-          <td>Designer bridal</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Saks Panamá</td>
-          <td>Boutique</td>
-          <td>Multiplaza</td>
-          <td>@sakspanama</td>
-          <td>$200–$3k</td>
-          <td>Elegant bridal</td>
-        </tr>
-
-        <tr class="fashion-row">
-          <td>Madison Store Panamá</td>
-          <td>Boutique</td>
-          <td>Panamá City</td>
-          <td>@madisonstorepa</td>
-          <td>$300–$2k</td>
-          <td>Chic minimal</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-  <div style="margin-top:18px;">
-    <span class="tag">Scroll →</span>
-    <span class="tag">Luxury bridal database</span>
-    <span class="tag">Curated Panama guide</span>
-  </div>
-
-</div>
-  </div>
-</section>
-
-<section id="premium" class="premium">
-  <div class="center">
-    
-    <h2>Bride+ Planning</h2>
-
-    <p>
-      Coming soon: presupuesto flexible, checklist completo,
-      comparación de proveedores, recomendaciones personalizadas
-      y guía PDF para brides en Panamá.
-    </p>
-
-    <div class="premium-buttons">
-
-      <a 
-        href="https://forms.gle/W6jsbcKEJ4XGrYhG7" 
-        target="_blank" 
-        class="btn primary-btn"
-      >
-        Obtener acceso anticipado
-      </a>
-
-      <a 
-        href="premium.html" 
-        class="btn secondary-btn"
-      >
-        Entrar al directorio Bride+
-      </a>
-
-    </div>
-
+<section class="final-cta" id="comprar">
+  <div class="container">
+    <img src="logo.png" alt="PB" class="logo-final reveal">
+    <div class="eyebrow reveal">Última cosa</div>
+    <h2 class="reveal">Como tener una amiga que <span class="italic">ya se casó.</span></h2>
+    <p class="reveal">Y te pasa todos sus contactos, todos sus precios reales, y te dice qué evitar. Por $19, una sola vez. Solo para las primeras 50.</p>
+    <a href="premium.html" class="btn-primary reveal">Reservar mi lugar por $19</a>
+    <div class="guarantee reveal">Pago seguro · Acceso inmediato · Garantía 14 días</div>
   </div>
 </section>
 
 <footer>
-  The Panama Bride · Guía independiente para planificación de bodas en Panamá.<br>
-  <span class="small">Precios, capacidades, teléfonos y disponibilidad deben confirmarse directamente con cada proveedor.</span>
+  <div class="footer-logo">
+    <img src="logo.png" alt="PB">
+    <span class="nav-logo-text">The Panama Bride</span>
+  </div>
+  <div class="links">
+    <a href="about.html">About</a> ·
+    <a href="contact.html">Contact</a> ·
+    <a href="privacy.html">Privacy</a>
+  </div>
+  <div class="copyright">© 2026 Panama Bride · Hecho en Panamá</div>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div class="sticky-buy" id="stickyBuy">
+  <div class="sticky-buy-info">
+    <div class="sticky-buy-title">Bride+ Founding</div>
+    <div class="sticky-buy-price">$19 · Solo primeras 50</div>
+  </div>
+  <a href="premium.html" class="btn">Reservar</a>
+</div>
 
 <script>
-const venues = [
-  {name:"Casa Veranda", tipo:"Ciudad", zona:"Panamá City", distancia:"0 km", capacidad:"150-250", precio:"$8k-$20k", maps:"https://maps.google.com/?q=Casa+Veranda+Panama", contact:"https://www.google.com/search?q=Casa+Veranda+Panama+contacto", lat:8.9824, lng:-79.5199},
-  {name:"The Santa Maria, a Luxury Collection Hotel & Golf Resort", tipo:"Ciudad", zona:"Panamá City", distancia:"15 min", capacidad:"300-500", precio:"$20k-$80k", maps:"https://maps.google.com/?q=The+Santa+Maria+Panama", contact:"https://www.google.com/search?q=The+Santa+Maria+Panama+weddings+contact", lat:9.0186, lng:-79.4665},
-  {name:"JW Marriott Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"300-700", precio:"$25k-$100k", maps:"https://maps.google.com/?q=JW+Marriott+Panama", contact:"https://www.google.com/search?q=JW+Marriott+Panama+weddings+contact", lat:8.9766, lng:-79.5075},
-  {name:"Sortis Hotel, Spa & Casino", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"250-600", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Sortis+Hotel+Panama", contact:"https://www.google.com/search?q=Sortis+Hotel+Panama+weddings+contact", lat:8.9878, lng:-79.5232},
-  {name:"Waldorf Astoria Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"5 min", capacidad:"150-350", precio:"$18k-$60k", maps:"https://maps.google.com/?q=Waldorf+Astoria+Panama", contact:"https://www.google.com/search?q=Waldorf+Astoria+Panama+weddings+contact", lat:8.9799, lng:-79.5214},
-  {name:"Hotel La Compañía", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"80-450", precio:"$20k-$90k", maps:"https://maps.google.com/?q=Hotel+La+Compañia+Panama", contact:"https://www.google.com/search?q=Hotel+La+Compañia+Panama+weddings+contact", lat:8.9522, lng:-79.5353},
-  {name:"American Trade Hotel", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"100-300", precio:"$18k-$60k", maps:"https://maps.google.com/?q=American+Trade+Hotel", contact:"https://www.google.com/search?q=American+Trade+Hotel+Panama+weddings+contact", lat:8.9525, lng:-79.5350},
-  {name:"Sofitel Legend Casco Viejo", tipo:"Ciudad", zona:"Casco Viejo", distancia:"10 min", capacidad:"120-350", precio:"$25k-$100k", maps:"https://maps.google.com/?q=Sofitel+Legend+Casco+Viejo", contact:"https://www.google.com/search?q=Sofitel+Legend+Casco+Viejo+weddings+contact", lat:8.9510, lng:-79.5318},
-  {name:"Azahar Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-180", precio:"$8k-$25k", maps:"https://maps.google.com/?q=Azahar+Panama", contact:"https://www.google.com/search?q=Azahar+Panama+eventos+contacto", lat:8.9826, lng:-79.5115},
-  {name:"Filomena Cucina di Mare Panamá", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-200", precio:"$10k-$30k", maps:"https://maps.google.com/?q=Filomena+Panama", contact:"https://www.google.com/search?q=Filomena+Panama+eventos+contacto", lat:8.9830, lng:-79.5120},
-  {name:"Hacienda Real Panamá", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"100-250", precio:"$7k-$20k", maps:"https://maps.google.com/?q=Hacienda+Real+Panama", contact:"https://www.google.com/search?q=Hacienda+Real+Panama+eventos+contacto", lat:8.9940, lng:-79.5200},
-  {name:"Restaurante El Jardín de Gaudí", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"80-180", precio:"$6k-$18k", maps:"https://maps.google.com/?q=El+Jardin+de+Gaudi+Panama", contact:"https://www.google.com/search?q=El+Jardin+de+Gaudi+Panama+eventos+contacto", lat:8.9870, lng:-79.5200},
-  {name:"Biomuseo", tipo:"Ciudad", zona:"Amador", distancia:"15 min", capacidad:"200-500", precio:"$15k-$60k", maps:"https://maps.google.com/?q=Biomuseo+Panama", contact:"https://www.google.com/search?q=Biomuseo+Panama+eventos+contacto", lat:8.9344, lng:-79.5444},
-  {name:"Panamá Viejo", tipo:"Ciudad", zona:"Panamá Viejo", distancia:"15 min", capacidad:"300-1000", precio:"$20k-$120k", maps:"https://maps.google.com/?q=Panama+Viejo", contact:"https://www.google.com/search?q=Panama+Viejo+eventos+contacto", lat:9.0050, lng:-79.4855},
-  {name:"Bristol Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"120-300", precio:"$12k-$40k", maps:"https://maps.google.com/?q=Bristol+Panama", contact:"https://www.google.com/search?q=Bristol+Panama+weddings+contact", lat:8.9812, lng:-79.5228},
-  {name:"W Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"150-450", precio:"$18k-$60k", maps:"https://maps.google.com/?q=W+Panama", contact:"https://www.google.com/search?q=W+Panama+weddings+contact", lat:8.9829, lng:-79.5206},
-  {name:"Hilton Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"5 min", capacidad:"250-700", precio:"$20k-$90k", maps:"https://maps.google.com/?q=Hilton+Panama", contact:"https://www.google.com/search?q=Hilton+Panama+weddings+contact", lat:8.9758, lng:-79.5208},
-  {name:"The Westin Panama", tipo:"Ciudad", zona:"Costa del Este", distancia:"15 min", capacidad:"200-500", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Westin+Panama", contact:"https://www.google.com/search?q=Westin+Panama+weddings+contact", lat:9.0106, lng:-79.4727},
-  {name:"Intercontinental Miramar Panama", tipo:"Ciudad", zona:"Avenida Balboa", distancia:"5 min", capacidad:"200-500", precio:"$15k-$55k", maps:"https://maps.google.com/?q=Intercontinental+Miramar+Panama", contact:"https://www.google.com/search?q=Intercontinental+Miramar+Panama+weddings+contact", lat:8.9744, lng:-79.5240},
-  {name:"Gran Evenia Panama", tipo:"Ciudad", zona:"Panamá City", distancia:"10 min", capacidad:"150-400", precio:"$10k-$35k", maps:"https://maps.google.com/?q=Gran+Evenia+Panama", contact:"https://www.google.com/search?q=Gran+Evenia+Panama+eventos+contacto", lat:8.9840, lng:-79.5230},
-
-  {name:"Dreams Playa Bonita Panama", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-500", precio:"$12k-$70k", maps:"https://maps.google.com/?q=Dreams+Playa+Bonita", contact:"https://www.google.com/search?q=Dreams+Playa+Bonita+weddings+contact", lat:8.8995, lng:-79.5710},
-  {name:"The Westin Playa Bonita Panama", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-500", precio:"$15k-$80k", maps:"https://maps.google.com/?q=Westin+Playa+Bonita", contact:"https://www.google.com/search?q=Westin+Playa+Bonita+weddings+contact", lat:8.9001, lng:-79.5735},
-  {name:"Playa Bonita Resort", tipo:"Playa", zona:"Veracruz", distancia:"25 min", capacidad:"100-300", precio:"$10k-$40k", maps:"https://maps.google.com/?q=Playa+Bonita+Panama", contact:"https://www.google.com/search?q=Playa+Bonita+Panama+weddings+contact", lat:8.9010, lng:-79.5740},
-  {name:"The Buenaventura Golf & Beach Resort", tipo:"Playa", zona:"Buenaventura", distancia:"1h 45m", capacidad:"100-600", precio:"$20k-$120k", maps:"https://maps.google.com/?q=Buenaventura+Panama", contact:"https://www.google.com/search?q=Buenaventura+Panama+weddings+contact", lat:8.3850, lng:-80.1210},
-  {name:"Hotel Riu Playa Blanca", tipo:"Playa", zona:"Río Hato", distancia:"2h", capacidad:"150-700", precio:"$10k-$50k", maps:"https://maps.google.com/?q=Riu+Playa+Blanca", contact:"https://www.google.com/search?q=Riu+Playa+Blanca+weddings+contact", lat:8.3566, lng:-80.1449},
-  {name:"Bijao Beach Resort", tipo:"Playa", zona:"Bijao", distancia:"1h 45m", capacidad:"120-400", precio:"$10k-$40k", maps:"https://maps.google.com/?q=Bijao+Beach+Resort", contact:"https://www.google.com/search?q=Bijao+Beach+Resort+weddings+contact", lat:8.3820, lng:-80.1540},
-  {name:"Royal Decameron Panama", tipo:"Playa", zona:"Farallón", distancia:"2h", capacidad:"150-600", precio:"$10k-$45k", maps:"https://maps.google.com/?q=Royal+Decameron+Panama", contact:"https://www.google.com/search?q=Royal+Decameron+Panama+weddings+contact", lat:8.3650, lng:-80.1420},
-  {name:"Nayara Bocas del Toro", tipo:"Playa", zona:"Bocas del Toro", distancia:"vuelo", capacidad:"50-120", precio:"$40k-$150k", maps:"https://maps.google.com/?q=Nayara+Bocas+del+Toro", contact:"https://www.google.com/search?q=Nayara+Bocas+del+Toro+weddings+contact", lat:9.3480, lng:-82.2400},
-  {name:"Isla Palenque Resort", tipo:"Playa", zona:"Chiriquí", distancia:"vuelo + carro", capacidad:"40-120", precio:"$35k-$120k", maps:"https://maps.google.com/?q=Isla+Palenque+Resort", contact:"https://www.google.com/search?q=Isla+Palenque+Resort+weddings+contact", lat:8.1960, lng:-82.3030},
-  {name:"Red Frog Beach Island Resort", tipo:"Playa", zona:"Bocas", distancia:"vuelo", capacidad:"80-250", precio:"$20k-$80k", maps:"https://maps.google.com/?q=Red+Frog+Beach+Resort", contact:"https://www.google.com/search?q=Red+Frog+Beach+Resort+weddings+contact", lat:9.3370, lng:-82.1740},
-  {name:"Sansara Surf & Yoga Resort", tipo:"Playa", zona:"Cambutal", distancia:"5h", capacidad:"40-120", precio:"$15k-$60k", maps:"https://maps.google.com/?q=Sansara+Cambutal", contact:"https://www.google.com/search?q=Sansara+Cambutal+weddings+contact", lat:7.2650, lng:-80.4920},
-  {name:"Playa Venao Hotel Resort", tipo:"Playa", zona:"Venao", distancia:"5h", capacidad:"80-250", precio:"$12k-$50k", maps:"https://maps.google.com/?q=Playa+Venao+Resort", contact:"https://www.google.com/search?q=Playa+Venao+Resort+weddings+contact", lat:7.4330, lng:-80.1880},
-
-  {name:"Hacienda Country Club Clubhouse", tipo:"Montaña", zona:"Cerro Azul", distancia:"45 min", capacidad:"100-350", precio:"$8k-$30k", maps:"https://maps.google.com/?q=Hacienda+Country+Club+Cerro+Azul", contact:"https://www.google.com/search?q=Hacienda+Country+Club+Cerro+Azul+eventos+contacto", lat:9.1550, lng:-79.4200},
-  {name:"La Semilla Ecolodge", tipo:"Montaña", zona:"Cerro Azul", distancia:"45 min", capacidad:"40-120", precio:"$6k-$20k", maps:"https://maps.google.com/?q=La+Semilla+Cerro+Azul", contact:"https://www.google.com/search?q=La+Semilla+Cerro+Azul+weddings+contact", lat:9.1700, lng:-79.4150},
-  {name:"Hacienda Los Molinos", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"80-250", precio:"$15k-$50k", maps:"https://maps.google.com/?q=Hacienda+Los+Molinos", contact:"https://www.google.com/search?q=Hacienda+Los+Molinos+weddings+contact", lat:8.7000, lng:-82.4300},
-  {name:"Valle Escondido Resort", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"100-300", precio:"$15k-$55k", maps:"https://maps.google.com/?q=Valle+Escondido+Boquete", contact:"https://www.google.com/search?q=Valle+Escondido+Boquete+weddings+contact", lat:8.7760, lng:-82.4330},
-  {name:"Hotel La Compañía del Valle", tipo:"Montaña", zona:"El Valle", distancia:"2h 30m", capacidad:"80-250", precio:"$18k-$70k", maps:"https://maps.google.com/?q=Hotel+La+Compania+del+Valle", contact:"https://www.google.com/search?q=Hotel+La+Compania+del+Valle+weddings+contact", lat:8.6030, lng:-80.1300},
-  {name:"Los Mandarinos Boutique Spa", tipo:"Montaña", zona:"El Valle", distancia:"2h 30m", capacidad:"60-180", precio:"$10k-$35k", maps:"https://maps.google.com/?q=Los+Mandarinos+Panama", contact:"https://www.google.com/search?q=Los+Mandarinos+Panama+weddings+contact", lat:8.6000, lng:-80.1270},
-  {name:"Los Establos Boutique Resort", tipo:"Montaña", zona:"Boquete", distancia:"vuelo + carro", capacidad:"50-150", precio:"$18k-$60k", maps:"https://maps.google.com/?q=Los+Establos+Boquete", contact:"https://www.google.com/search?q=Los+Establos+Boquete+weddings+contact", lat:8.7820, lng:-82.4340},
-  {name:"Hacienda mi Montañita", tipo:"Montaña", zona:"Panamá", distancia:"45 min", capacidad:"80-250", precio:"$6k-$25k", maps:"https://maps.google.com/?q=Hacienda+Mi+Montanita", contact:"https://www.google.com/search?q=Hacienda+Mi+Montanita+eventos+contacto", lat:9.1200, lng:-79.4300},
-
-  {name:"Gamboa Rainforest Reserve", tipo:"Naturaleza", zona:"Gamboa", distancia:"45 min", capacidad:"120-500", precio:"$12k-$45k", maps:"https://maps.google.com/?q=Gamboa+Rainforest+Reserve", contact:"https://www.google.com/search?q=Gamboa+Rainforest+Reserve+weddings+contact", lat:9.1160, lng:-79.6960}
-];
-
-function enrichVenue(v){
-  const base = {
-    ideal:"bodas elegantes, recepción formal, sesión editorial y celebración familiar",
-    pros:["Buena ubicación", "Experiencia formal", "Opciones para recepción", "Potencial para fotos elegantes"],
-    hotels:["Consultar hoteles cercanos según zona", "Opciones de hospedaje alrededor", "Coordinar transporte para invitados"],
-    faq:["Confirmar wedding planner externo", "Confirmar parking/valet", "Confirmar plan de lluvia"],
-    vibe:"Classic luxury · candlelight dinner · editorial bride · champagne palette"
-  };
-
-  if(v.tipo === "Playa"){
-    base.ideal = "destination weddings, bodas tropicales, sunset ceremony y weekend wedding";
-    base.pros = ["Experiencia de destino", "Fotos al atardecer", "Ambiente relajado", "Ideal para invitados de fuera"];
-    base.hotels = ["Hospedaje en resort", "Hoteles de playa cercanos", "Coordinar transporte desde ciudad/aeropuerto"];
-    base.faq = ["Confirmar plan B por lluvia", "Confirmar hospedaje mínimo", "Confirmar permisos para ceremonia en playa"];
-    base.vibe = "Barefoot luxury · sunset vows · tropical destination wedding · linen & pearls";
-  }
-
-  if(v.tipo === "Montaña" || v.tipo === "Naturaleza"){
-    base.ideal = "bodas románticas, jardín, naturaleza, clima fresco y celebración íntima";
-    base.pros = ["Ambiente natural", "Fotos verdes", "Clima más fresco", "Perfecto para boda íntima o weekend wedding"];
-    base.hotels = ["Hospedajes boutique cercanos", "Airbnb/villas para invitados", "Coordinar transporte grupal"];
-    base.faq = ["Confirmar acceso para proveedores", "Confirmar plan de lluvia", "Confirmar hospedaje cercano"];
-    base.vibe = "Garden romance · mountain escape · organic florals · soft candlelight";
-  }
-
-  return {...v, ...base};
-}
-
-const enrichedVenues = venues.map(enrichVenue);
-
-let map = L.map('map').setView([8.8, -79.8], 7);
-let markers = [];
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
-function pintarVenues(lista){
-  document.getElementById("venueGrid").innerHTML = lista.map(v => `
-    <div class="card venue-card">
-      <h3>${v.name}</h3>
-      <p>${v.zona} · ${v.distancia} desde Ciudad de Panamá</p>
-
-      <span class="tag">${v.tipo}</span>
-      <span class="tag">${v.capacidad} invitados aprox.</span>
-      <span class="tag">${v.precio}</span>
-
-      <p style="margin-top:18px;"><strong>Ideal para:</strong> ${v.ideal}</p>
-
-      <div class="venue-actions">
-        <a href="${v.maps}" target="_blank" class="btn small-btn">Ver ubicación</a>
-        <a href="${v.contact}" target="_blank" class="btn alt small-btn">Contactar venue</a>
-      </div>
-
-      <details>
-        <summary>Ver ficha del venue</summary>
-        <br>
-
-        <p><strong>Gallery:</strong> usa el botón de ubicación/contacto para ver fotos actualizadas del lugar.</p>
-        <p><strong>Capacidad:</strong> ${v.capacidad} invitados aprox.</p>
-        <p><strong>Presupuesto estimado:</strong> ${v.precio}</p>
-
-        <p><strong>Pros:</strong></p>
-        <ul>${v.pros.map(p => `<li>${p}</li>`).join("")}</ul>
-
-        <p><strong>Hoteles cercanos / logística:</strong></p>
-        <ul>${v.hotels.map(h => `<li>${h}</li>`).join("")}</ul>
-
-        <p><strong>FAQ para preguntar:</strong></p>
-        <ul>${v.faq.map(f => `<li>${f}</li>`).join("")}</ul>
-
-        <p><strong>Pinterest vibe:</strong> ${v.vibe}</p>
-      </details>
-    </div>
-  `).join("");
-}
-
-function pintarMapa(lista){
-  markers.forEach(m => map.removeLayer(m));
-  markers = [];
-
-  lista.forEach(v => {
-    const marker = L.marker([v.lat, v.lng])
-      .addTo(map)
-      .bindPopup(`
-        <strong>${v.name}</strong><br>
-        ${v.zona}<br>
-        Capacidad: ${v.capacidad}<br>
-        Precio: ${v.precio}<br>
-        <a href="${v.maps}" target="_blank">Google Maps</a>
-      `);
-    markers.push(marker);
-  });
-
-  if(lista.length > 0){
-    const group = new L.featureGroup(markers);
-    map.fitBounds(group.getBounds().pad(0.2));
-  }
-}
-
-function filtrarVenues(){
-  const filtro = document.getElementById("venueFilter").value;
-
-  if(!filtro){
-    document.getElementById("venueGrid").innerHTML = `
-      <div class="card">
-        <h3>Selecciona una categoría</h3>
-        <p>Escoge Ciudad, Playa, Montaña o Naturaleza para explorar venues curados.</p>
-      </div>
-    `;
-    markers.forEach(m => map.removeLayer(m));
-    markers = [];
-    map.setView([8.8, -79.8], 7);
-    return;
-  }
-
-  const lista = enrichedVenues.filter(v => v.tipo === filtro);
-  pintarVenues(lista);
-  pintarMapa(lista);
-}
-
-function crearPlan(){
-
-  const bride = "Novia";
-  const guests = document.getElementById("guests").value;
-  const vibe = document.getElementById("vibe").value;
-  const budget = document.getElementById("budget").value;
-  const priority = document.getElementById("priority").value;
-  const destination = document.getElementById("destination").value;
-
-  let titulo = "Novia Panamá Moderna";
-  let palette = "Ivory · champagne · soft gold";
-  let venues = "Santa María · Sofitel · Casa Veranda";
-  let vendors = "Pompa · PRP Events · Jenny Polonsky";
-  let budgetRange = "$25k-$60k";
-  let vibeText = "Classic luxury con detalles editoriales.";
-
-  if(vibe === "playa"){
-    titulo = "Novia Tropical Destination";
-    palette = "Sand · pearl · tropical green";
-    venues = "Buenaventura · Playa Bonita · Bocas";
-    vendors = "Trust Events · Regina Events";
-    budgetRange = "$18k-$55k";
-    vibeText = "Sunset wedding con experiencia relajada pero elegante.";
-  }
-
-  if(vibe === "romántica"){
-    titulo = "Novia Jardín Romántica";
-    palette = "Blush · ivory · candlelight";
-    venues = "Boquete · El Valle · garden venues";
-    vendors = "Très Chic · Lala Panama";
-    budgetRange = "$15k-$45k";
-    vibeText = "Garden romance con flores suaves y cena íntima.";
-  }
-
-  if(vibe === "oldmoney"){
-    titulo = "Old Money Bride";
-    palette = "Black · ivory · champagne";
-    venues = "Sofitel · Santa María · Hotel La Compañía";
-    vendors = "Pompa · The Planners Firm";
-    budgetRange = "$40k-$120k";
-    vibeText = "Formal, timeless y ultra elegante.";
-  }
-
-  if(vibe === "european"){
-    titulo = "European Summer Bride";
-    palette = "White · olive · soft blue";
-    venues = "Casco Viejo · Buenaventura";
-    vendors = "PRP Events · Regina Events";
-    budgetRange = "$25k-$70k";
-    vibeText = "Inspiración mediterránea y editorial.";
-  }
-
-  document.getElementById("plan").classList.remove("hidden");
-
-  document.getElementById("plan").innerHTML = `
-    <div class="center">
-
-      <span class="tag">Perfil detectado</span>
-
-      <h3 style="font-size:42px;margin-top:18px;">
-        ${titulo}
-      </h3>
-
-      <p style="max-width:850px;margin:auto;">
-        $Tu boda se perfila como una experiencia
-        <strong>${vibeText}</strong>
-      </p>
-
-      <div class="grid" style="margin-top:35px;">
-
-        <div class="card">
-          <h3>Venues ideales</h3>
-          <p>${venues}</p>
-        </div>
-
-        <div class="card">
-          <h3>Paleta sugerida</h3>
-          <p>${palette}</p>
-        </div>
-
-        <div class="card">
-          <h3>Presupuesto típico</h3>
-          <p>${budgetRange}</p>
-        </div>
-
-        <div class="card">
-          <h3>Prioridad principal</h3>
-          <p>${priority}</p>
-        </div>
-
-      </div>
-
-      <div class="card" style="margin-top:28px;text-align:left;">
-
-        <h3>Pinterest energy</h3>
-
-        <p>
-          ${vibeText}
-        </p>
-
-        <br>
-
-        <h3>🤍 Vendors compatibles</h3>
-
-        <p>${vendors}</p>
-
-        <br>
-
-        <h3>Costos que probablemente necesitarás</h3>
-
-        <ul>
-          <li>Valet parking</li>
-          <li>Plan de lluvia / tent</li>
-          <li>Horas extra DJ</li>
-          <li>Transporte invitados</li>
-          <li>Room blocks / hospedaje</li>
-          <li>Descorche y overtime</li>
-        </ul>
-
-      </div>
-
-      <div class="card" style="margin-top:28px;background:#15100d;border:1px solid rgba(243,213,167,.35);">
-
-        <h3>Desbloquea la versión Bride+</h3>
-
-        <div class="grid" style="margin-top:20px;">
-
-          <div>Comparador de vendors</div>
-          <div>Budget planner editable</div>
-          <div>Directorio privado completo</div>
-          <div>Hidden gems & venues</div>
-          <div>Wedding timeline</div>
-          <div>Plantilla PDF descargable</div>
-
-        </div>
-
-        <br>
-
-        <a href="premium.html" class="btn">
-          Entrar al dashboard Bride+
-        </a>
-
-      </div>
-
-    </div>
-  `;
-}
-
-filtrarVenues();
+  const SPOTS_TAKEN = 0;
+  const SPOTS_TOTAL = 50;
+  const fillEl = document.getElementById('spotsFill');
+  const takenEl = document.getElementById('spotsTaken');
+  setTimeout(() => {
+    fillEl.style.width = ((SPOTS_TAKEN / SPOTS_TOTAL) * 100) + '%';
+    takenEl.textContent = SPOTS_TAKEN;
+  }, 400);
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  const stickyBuy = document.getElementById('stickyBuy');
+  const hero = document.querySelector('.hero-immersive');
+  const finalCta = document.querySelector('.final-cta');
+  const stickyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.target === hero) {
+        if (!e.isIntersecting) stickyBuy.classList.add('visible');
+      }
+      if (e.target === finalCta) {
+        if (e.isIntersecting) stickyBuy.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0 });
+  stickyObserver.observe(hero);
+  stickyObserver.observe(finalCta);
 </script>
-<img 
-  src="logo.png"
-  alt="PB"
-  style="
-    position:fixed;
-    bottom:24px;
-    right:24px;
-    width:500px;
-    opacity:.30;
-    z-index:999;
-    pointer-events:none;
-  "
->
-  <footer class="center" style="padding:40px 20px;">
-  <p>
-    <a href="about.html">About Us</a> ·
-    <a href="contact.html">Contact</a> ·
-    <a href="privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 Panama Bride. All rights reserved.</p>
-</footer>
+
 </body>
 </html>
